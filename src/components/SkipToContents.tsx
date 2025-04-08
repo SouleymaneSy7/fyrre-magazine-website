@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 
 interface SkiptToContentsPropsType {
@@ -14,7 +16,7 @@ const SkipToContent: React.FC<SkiptToContentsPropsType> = ({ classNames }) => {
     if (event.key === "Enter") {
       event.preventDefault();
       const mainContent = document.getElementById("main-content");
-      
+
       if (mainContent) {
         mainContent.setAttribute("tabindex", "-1");
         mainContent.focus();
