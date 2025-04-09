@@ -1,5 +1,39 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const generalSans = localFont({
+  src: [
+    {
+      path: "../../public/assets/fonts/general-sans-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/general-sans-regular-italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/assets/fonts/general-sans-medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/general-sans-medium-italic.woff2",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../../public/assets/fonts/general-sans-semi-bold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  variable: "--font-general-sans",
+  display: "swap",
+  fallback: ["sans-serif"],
+});
 
 export const metadata: Metadata = {
   title: "Fyrre - Modern Magazine & Digital Content Hub",
@@ -33,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`${generalSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
