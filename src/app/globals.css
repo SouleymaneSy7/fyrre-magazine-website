@@ -1,64 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  /* =======================
-              Colors
-     ======================= */
+  /* Max Width */
+  --max-width-xx-large: 80rem;
+  --max-width-x-large: 64rem;
+  --max-width-large: 48rem;
+  --max-width-medium: 30rem;
+  --max-width-small: 20rem;
+  --max-width-x-small: 16rem;
+  --max-width-xx-small: 12rem;
+}
 
-  /* Background Colors */
-  --default-clr: hsl(0, 0%, 100%);
-  --primary-clr: hsl(0, 0%, 0%);
+@theme {
+  /* Colors */
+  --color-*: initial;
+  --color-default-clr:oklch(1 0 0);
+  --color-primary-clr: oklch(0 0 0);
+  --color-border-default-clr: var(--color-primary-clr);
+  --color-border-inversed-clr: oklch(1 0 0 / 15%);
+  --color-text-default-clr: var(--color-primary-clr);
+  --color-inversed-clr: var(--color-default-clr);
+  --color-text-muted-clr: oklch(0.17 0 0 / 60%);
 
-  /* Border Colors */
-  --border-default-clr: var(--primary-clr);
-  --border-inversed-clr: hsla(0, 0%, 100%, 0.15);
+  /* Font Size */
+  --font-*: initial;
+  --font-general-sans: var(--font-general-sans);
 
-  /* Text Colors */
-  --text-default-clr: var(--primary-clr);
-  --text-inversed-clr: var(--default-clr);
-  --text-muted-clr: hsla(0, 0%, 6%, 0.6);
+  --text-*: initial;
+  --text-fs-heading-x-large: clamp(4rem, 1.8667rem + 10.6667vw, 12rem);
+  --text-fs-heading-large: clamp(2.5rem, 1.0333rem + 7.3333vw, 8rem);
+  --text-fs-heading-medium: clamp(2.5rem, 1.5667rem + 4.6667vw, 6rem);
+  --text-fs-heading-1: clamp(2.5rem, 2.1rem + 2vw, 4rem);
+  --text-fs-heading-2: clamp(2rem, 1.7333rem + 1.3333vw, 3rem);
+  --text-fs-heading-3: clamp(1.5rem, 1.3667rem + 0.6667vw, 2rem);
+  --text-fs-heading-4: clamp(1.25rem, 1.1833rem + 0.3333vw, 1.5rem);
+  --text-fs-heading-5: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --text-fs-heading-6: clamp(1rem, 1rem + 0vw, 1rem);
 
-  /* =======================
-              Fonts
-     ======================= */
+  --text-fs-text-default: clamp(0.875rem, 0.8417rem + 0.1667vw, 1rem);
+  --text-fs-text-large: 1.25rem;
+  --text-fs-text-medium: 1.125rem;
+  --text-fs-text-regular: 1rem;
+  --text-fs-text-small: 0.875rem;
+  --text-fs-text-tiny: 0.875rem;
 
-  /* Font Family */
-  --ff-primary: "General Sans", sans-serif;
+  --text-fs-paragraph: var(--text-fs-text-default);
+  --text-fs-link: var(--text-fs-text-default);
+  --text-fs-quote-large: clamp(1.75rem, 1.4167rem + 1.6667vw, 3rem);
+  --text-fs-quote: var(--text-fs-text-medium);
 
-  /* Font Weights */
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semi-bold: 600;
+  /* Font Weight */
+  --font-weight-*: initial;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
 
-  /* Font Size Headings */
-  --fs-xlarge: clamp(4rem, 1.8667rem + 10.6667vw, 12rem);
-  --fs-large: clamp(2.5rem, 1.0333rem + 7.3333vw, 8rem);
-  --fs-medium: clamp(2.5rem, 1.5667rem + 4.6667vw, 6rem);
-  --fs-heading-1: clamp(2.5rem, 2.1rem + 2vw, 4rem);
-  --fs-heading-2: clamp(2rem, 1.7333rem + 1.3333vw, 3rem);
-  --fs-heading-3: clamp(1.5rem, 1.3667rem + 0.6667vw, 2rem);
-  --fs-heading-4: clamp(1.25rem, 1.1833rem + 0.3333vw, 1.5rem);
-  --fs-heading-5: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  --fs-heading-6: clamp(1rem, 1rem + 0vw, 1rem);
-
-  /* Font Size Texts */
-  --fs-default: clamp(0.875rem, 0.8417rem + 0.1667vw, 1rem);
-  --fs-large: 1.25rem;
-  --fs-medium: 1.125rem;
-  --fs-regular: 1rem;
-  --fs-small: 0.875rem;
-  --fs-tiny: 0.75rem;
-
-  /* Others Elements */
-  --fs-paragraph: var(--fs-default);
-  --fs-link: var(--fs-default);
-  --fs-quote-large: clamp(1.75rem, 1.4167rem + 1.6667vw, 3rem);
-  --fs-quote: var(--fs-medium);
-
-  /* =======================
-            Spacings
-     ======================= */
-
+  /* Spacing */
+  --spacing: initial;
   --spacing-tiny: 0.125rem;
   --spacing-xx-small: 0.25rem;
   --spacing-x-small: 0.5rem;
@@ -71,32 +69,12 @@
   --spacing-x-huge: 4rem;
   --spacing-xx-huge: 4.5rem;
 
-  /* =======================
-            Max Width
-     ======================= */
-
-  --max-width-xx-large: 80rem;
-  --max-width-x-large: 64rem;
-  --max-width-large: 48rem;
-  --max-width-medium: 30rem;
-  --max-width-small: 20rem;
-  --max-width-x-small: 16rem;
-  --max-width-xx-small: 12rem;
-
-  /* =======================
-            Container
-     ======================= */
-
+  /* Container */
   --container-large: 95rem;
   --container-medium: 64rem;
   --container-small: 48rem;
 }
 
 body {
-  background: var(--default-clr);
-  color: var(--text-default-clr);
-  font-family: var(--font-general-sans);
-  font-size: var(--fs-default);
-  font-weight: var(--fw-regular);
-  overflow-x: hidden;
+  @apply bg-default-clr text-text-default-clr text-fs-text-default font-general-sans font-regular overflow-x-hidden;
 }
