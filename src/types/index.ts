@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export type VisuallyHiddenPropsType = {
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<"span">;
@@ -25,3 +27,9 @@ export type ContainerPropsTypes<T extends React.ElementType> = {
   as?: T;
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<T>;
+
+export type ListPropsType<Item, As extends React.ElementType> = {
+  items: Item[];
+  renderItem: (item: Item) => React.ReactNode;
+  as?: As
+};
