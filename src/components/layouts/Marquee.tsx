@@ -1,16 +1,8 @@
 "use client";
 
 import * as React from "react";
+import { MarqueeAnimationType, MarqueePropsType } from "@/types";
 
-export type MarqueeAnimationType = (
-  element: HTMLElement,
-  elementWidth: number,
-  windowWidth: number
-) => void;
-
-export type MarqueePropsType = {
-  marqueeText: string[];
-};
 
 const marqueeAnimation: MarqueeAnimationType = (
   element,
