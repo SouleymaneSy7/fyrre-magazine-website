@@ -1,5 +1,5 @@
 import * as React from "react";
-import { VisuallyHiddenPropsType } from "@/types/types";
+import { VisuallyHiddenPropsType } from "@/types";
 
 const VisuallyHidden: React.FC<VisuallyHiddenPropsType> = ({
   children,

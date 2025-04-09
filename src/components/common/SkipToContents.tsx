@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { SkiptToContentsPropsType } from "@/types/types";
+import { SkiptToContentsPropsType } from "@/types";
 
 const SkipToContent: React.FC<SkiptToContentsPropsType> = ({ classNames }) => {
   const [isVisible, setIsVisible] = React.useState(false);

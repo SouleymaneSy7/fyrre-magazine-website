@@ -1,5 +1,5 @@
 import * as React from "react";
-import { InputsPropsType } from "@/types/types";
+import { InputsPropsType } from "@/types";
 
 const Inputs: React.FC<InputsPropsType> = ({
   label,

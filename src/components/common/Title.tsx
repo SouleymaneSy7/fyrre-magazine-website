@@ -1,6 +1,5 @@
 import * as React from "react";
-import { TitlePropsType } from "@/types/types";
-
+import { TitlePropsType } from "@/types";
 
 const Title: React.FC<TitlePropsType> = ({
   level,

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ContainerPropsTypes } from "@/types/types";
+import { ContainerPropsTypes } from "@/types";
 
 function Container<C extends React.ElementType>({
   as,
