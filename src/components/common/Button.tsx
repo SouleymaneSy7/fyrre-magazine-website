@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "cva";
 
 import { cn } from "@/libs/utils";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "cva";
 
 interface ButtonPropsType
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -13,26 +13,26 @@ interface ButtonPropsType
 const buttonStyles = cva({
   base: [
     "whitespace-nowrap",
-    "inline-flex items-center justify-center",
-    "text-sm font-medium transition-colors",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-    "disabled:pointer-events-none disabled:opacity-50",
+    "flex items-center justify-center",
+    "uppercase",
+    "transition-colors",
     "cursor-pointer",
   ],
   variants: {
     variant: {
       default:
-        "bg-blue-700 text-white hover:bg-blue-800 focus-visible:ring-blue-300",
-      destructive:
-        "bg-red-700 text-white hover:bg-red-800 focus-visible:ring-red-300",
-      outline:
-        "border border-gray-900 text-dark-900 bg-white hover:bg-gray-900 hover:text-white",
+        "bg-primary-clr rounded-none text-fs-text-small text-text-inversed-clr focus-visible:ring-primary-clr",
+      plain:
+        "flex gap-x-small bg-transparent text-text-default-clr font-semi-bold focus-visible:ring-primary-clr rounded-none p-0",
+      label:
+        "text-text-default-clr border border-border-default-clr bg-transparent rounded-full",
     },
     size: {
-      default: "h-10 px-4 py-2",
-      sm: "h-9 rounded-md px-3",
-      lg: "h-11 rounded-md px-8",
-      icon: "h-10 w-10",
+      default: "py-3 px-5",
+      plain: "p-0",
+      label: "py-2 px-3 text-fs-text-tiny ",
+      sm: "py-3 px-5",
+      lg: "py-4 px-8",
     },
   },
   defaultVariants: {
@@ -44,6 +44,7 @@ const buttonStyles = cva({
 const Button = React.forwardRef<HTMLButtonElement, ButtonPropsType>(
   ({ className, variant, size, asChild = false, ...delegatedProps }, ref) => {
     const Component = asChild ? Slot : "button";
+
     return (
       <Component
         className={cn(buttonStyles({ variant, size, className }))}
