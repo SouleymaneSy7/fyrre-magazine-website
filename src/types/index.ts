@@ -31,5 +31,15 @@ export type ContainerPropsTypes<T extends React.ElementType> = {
 export type ListPropsType<Item, As extends React.ElementType> = {
   items: Item[];
   renderItem: (item: Item) => React.ReactNode;
-  as?: As
+  as?: As;
+};
+
+export type MarqueeAnimationType = (
+  element: HTMLElement,
+  elementWidth: number,
+  windowWidth: number
+) => void;
+
+export type MarqueePropsType = {
+  marqueeText: string[];
 };
