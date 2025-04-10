@@ -17,7 +17,7 @@
   --color-default-clr: oklch(1 0 0);
   --color-primary-clr: oklch(0 0 0);
   --color-border-default-clr: var(--color-primary-clr);
-  --color-border-inversed-clr: oklch(1 0 0 / 15%);
+  --color-border-inversed-clr: oklch(0.17 0 0 / 10%);
   --color-text-default-clr: var(--color-primary-clr);
   --color-text-inversed-clr: var(--color-default-clr);
   --color-text-muted-clr: oklch(0.17 0 0 / 60%);
@@ -25,7 +25,7 @@
   /* Font Family */
   --font-*: initial;
   --font-general-sans: var(--font-general-sans);
-  
+
   /* Font Size */
   --text-*: initial;
   --text-fs-heading-x-large: clamp(4rem, 1.8667rem + 10.6667vw, 12rem);
@@ -91,7 +91,85 @@
 }
 
 @layer utilities {
+  .heading-x-large {
+    @apply text-fs-heading-x-large font-semi-bold leading-[100%];
+  }
+
+  .heading-large {
+    @apply text-fs-heading-large font-semi-bold;
+  }
+
+  .heading-medium {
+    @apply text-fs-heading-medium font-semi-bold;
+  }
+
+  .heading-1 {
+    @apply text-fs-heading-1 font-semi-bold;
+  }
+
+  .heading-2 {
+    @apply text-fs-heading-2;
+  }
+
+  .heading-3 {
+    @apply text-fs-heading-3;
+  }
+
+  .heading-4 {
+    @apply text-fs-heading-4;
+  }
+
+  .heading-5 {
+    @apply text-fs-heading-5;
+  }
+
+  .heading-6 {
+    @apply text-fs-heading-6;
+  }
+
+  .text-large {
+    @apply text-fs-text-large;
+  }
+
+  .text-medium {
+    @apply text-fs-text-medium;
+  }
+
+  .text-regular {
+    @apply text-fs-text-regular;
+  }
+
+  .text-small {
+    @apply text-fs-text-small;
+  }
+
+  .text-tiny {
+    @apply text-fs-text-tiny;
+  }
+
+  .text-italic {
+    @apply text-fs-paragraph italic;
+  }
+
+  .text-link {
+    @apply text-fs-paragraph underline;
+  }
+
+  .blockquote-large {
+    @apply text-fs-quote-large font-semi-bold leading-[120%] p-xx-large pr-0 border-b border-t border-border-default-clr;
+  }
 }
 
 @layer components {
+  .form-input {
+    @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
+  }
+
+  .form-textarea {
+    @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
+  }
+
+  .form-select {
+    @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
+  }
 }
