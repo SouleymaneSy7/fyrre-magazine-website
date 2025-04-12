@@ -34,12 +34,7 @@ export type ListPropsType<Item, As extends React.ElementType> = {
   as?: As;
 };
 
-export type MarqueeAnimationType = (
-  element: HTMLElement,
-  elementWidth: number,
-  windowWidth: number
-) => void;
-
 export type MarqueePropsType = {
   marqueeText: string[];
+  title?: string;
 };
