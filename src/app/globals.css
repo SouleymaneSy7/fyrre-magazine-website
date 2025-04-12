@@ -173,3 +173,24 @@
     @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
   }
 }
+
+.marquee-fade-out-horizontal {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-primary-clr) 1.5rem,
+    var(--color-primary-clr) calc(100% - 1.5rem),
+    transparent
+  );
+}
+
+.marquee-text-track {
+  animation: marquee-move-text var(--speed, 25s) linear infinite
+    var(--direction, forwards);
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
