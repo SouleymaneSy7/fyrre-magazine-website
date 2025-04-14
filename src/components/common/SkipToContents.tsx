@@ -37,7 +37,7 @@ const SkipToContent: React.FC<SkiptToContentsPropsType> = ({ classNames }) => {
       id="skip-to-content-link"
       href="#main-content"
       className={`
-        fixed top-4 left-4 z-50 ${classNames}
+        fixed top-4 left-4 z-50 bg-primary-clr rounded-none font-medium uppercase tracking-widest text-fs-text-small text-text-inversed-clr focus-visible:ring-primary-clr focus-visible:ring-rounded-none py-3 px-5
         ${isVisible ? "transform translate-y-0" : "transform -translate-y-20"}
       `}
       onFocus={handleFocus}
