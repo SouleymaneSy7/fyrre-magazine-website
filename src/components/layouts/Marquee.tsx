@@ -6,12 +6,9 @@ import { MarqueePropsType } from "@/types";
 const Marquee: React.FC<MarqueePropsType> = ({ marqueeText, title }) => {
   if (!title) {
     return (
-      <div className="relative w-full overflow-x-hidden bg-primary-clr py-4">
-        <div
-          id="marquee"
-          className="w-max whitespace-nowrap overflow-clip marquee-fade-out-horizontal"
-        >
-          <div className="flex items-center gap-8 lg:gap-24 bg-transparent marquee-text-track">
+      <div className="bg-primary-clr lg:py-5 relative w-full py-4 overflow-x-hidden">
+        <div className="marquee-fade-out-horizontal | overflow-clip  whitespace-nowrap w-max ">
+          <div className="marquee-text-track | flex items-center gap-8 lg:gap-14 bg-transparent">
             {marqueeText.map((name: string, index: number) => (
               <span
                 key={index}
@@ -27,18 +24,18 @@ const Marquee: React.FC<MarqueePropsType> = ({ marqueeText, title }) => {
   }
 
   return (
-    <div className="relative w-full flex items-center gap-8 overflow-x-hidden bg-primary-clr">
-      <div className="p-5">
-        <h2 className="text-fs-paragraph uppercase text-text-inversed-clr font-semi-bold">
+    <div className="bg-primary-clr lg:py-5 lg:pl-5 relative flex items-center w-full gap-8 py-4 pl-4 overflow-x-hidden">
+      <div>
+        <h2 className="text-fs-paragraph text-text-inversed-clr font-semi-bold uppercase">
           {title}
         </h2>
       </div>
 
       <div
         id="marquee"
-        className="w-max whitespace-nowrap p-5 overflow-clip marquee-fade-out-horizontal"
+        className="marquee-fade-out-horizontal | w-max whitespace-nowrap overflow-clip"
       >
-        <div className="flex items-center gap-8 bg-transparent marquee-text-track">
+        <div className="marquee-text-track | flex items-center gap-8 bg-transparent">
           {marqueeText.map((name: string, index: number) => (
             <span
               key={index}
