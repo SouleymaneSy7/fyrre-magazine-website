@@ -2,11 +2,12 @@ import Button from "@/components/common/Button";
 import Forms from "@/components/common/Form";
 import Inputs from "@/components/common/Input";
 import List from "@/components/common/List";
+import Marquee from "@/components/layouts/Marquee";
 import { ArrowRightIcon } from "@/icons/Icons.component";
 
 const list = ["List Element 1", "List Element 2", "List Element 3"];
 
-export default function page () {
+export default function page() {
   return (
     <main className="w-full h-screen space-y-6 p-8 mb-8">
       <h1 className="heading-1 uppercase">Style Guide</h1>
@@ -117,6 +118,40 @@ export default function page () {
           </Button>
         </Forms>
       </div>
+
+      <h2 className="heading-2">Marquee Component</h2>
+      <hr />
+
+      <h3 className="heading-4">Marquee With Title</h3>
+      <Marquee
+        title="Marquee Title"
+        marqueeText={[
+          "Sample Text 1",
+          "Sample Text 2",
+          "Sample Text 3",
+          "Sample Text 4",
+          "Sample Text 5",
+          "Sample Text 6",
+          "Sample Text 7",
+          "Sample Text 8",
+          "Sample Text 9",
+        ]}
+      />
+
+      <h3 className="heading-4">Marquee Without Title</h3>
+      <Marquee
+        marqueeText={[
+          "Sample Text 1",
+          "Sample Text 2",
+          "Sample Text 3",
+          "Sample Text 4",
+          "Sample Text 5",
+          "Sample Text 6",
+          "Sample Text 7",
+          "Sample Text 8",
+          "Sample Text 9",
+        ]}
+      />
     </main>
   );
 }
