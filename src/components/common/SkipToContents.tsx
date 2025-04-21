@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { SkiptToContentsPropsType } from "@/types";
 
-const SkipToContent: React.FC<SkiptToContentsPropsType> = ({ classNames }) => {
+const SkipToContent: React.FC = () => {
   const [isVisible, setIsVisible] = React.useState(false);
 
   const handleFocus = () => setIsVisible(true);
@@ -36,9 +35,8 @@ const SkipToContent: React.FC<SkiptToContentsPropsType> = ({ classNames }) => {
     <a
       id="skip-to-content-link"
       href="#main-content"
-      className={`
-        fixed top-4 left-4 z-50 bg-primary-clr rounded-none font-medium uppercase tracking-widest text-fs-text-small text-text-inversed-clr focus-visible:ring-primary-clr focus-visible:ring-rounded-none py-3 px-5
-        ${isVisible ? "transform translate-y-0" : "transform -translate-y-20"}
+      className={`fixed top-4 left-4 z-50 bg-primary-clr rounded-none font-medium uppercase tracking-widest text-fs-text-small text-text-inversed-clr focus-visible:ring-primary-clr focus-visible:ring-rounded-none py-3 px-5 transition-transform duration-300 ease-in-out
+        ${isVisible ? "transform translate-y-0" : "transform -translate-y-50"}
       `}
       onFocus={handleFocus}
       onBlur={handleBlur}
