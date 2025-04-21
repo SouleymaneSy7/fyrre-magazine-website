@@ -9,6 +9,7 @@ import Container from "../common/Container";
 import VisuallyHidden from "../common/VisuallyHidden";
 
 import { LogoIcon } from "@/icons/Icons.component";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -18,55 +19,28 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className="border-border-default-clr z-50 pb-5 overflow-hidden border-b"
-      role="navigation"
-    >
-      <Container
-        as="div"
-        className="lg:hidden flex items-center justify-between z-50"
+    <React.Fragment>
+      <nav
+        className="border-border-default-clr relative z-50 pb-5 border-b"
+        role="navigation"
       >
-        <Link href={"/"}>
-          <LogoIcon />
-          <VisuallyHidden>Fyrre magazine logo</VisuallyHidden>
-        </Link>
-
-        <button
-          type="button"
-          className="cursor-pointer | hamburger-btn"
-          onClick={handleIsOpen}
-          aria-expanded={isOpen}
-          aria-controls="menu"
+        <Container
+          as="div"
+          className="lg:hidden z-50 flex items-center justify-between"
         >
-          <span
-            className={
-              isOpen
-                ? "hamburger-menu hamburger-menu--top | opacity-100 rotate-45 translate-x-[3px] translate-y-[0px]"
-                : "hamburger-menu hamburger-menu--top"
-            }
-          ></span>
-          <span
-            className={
-              isOpen
-                ? "hamburger-menu hamburger-menu--center | opacity-0 rotate-0 scale-x-20 scale-y-20  "
-                : "hamburger-menu hamburger-menu--center"
-            }
-          ></span>
-          <span
-            className={
-              isOpen
-                ? "hamburger-menu hamburger-menu--bottom | opacity-100 -rotate-45 translate-x-[4px] translate-y-[4px]"
-                : "hamburger-menu hamburger-menu--bottom"
-            }
-          ></span>
-          <VisuallyHidden>Open & Close the mobile navigation</VisuallyHidden>
-        </button>
+          <Link href={"/"}>
+            <LogoIcon />
+            <VisuallyHidden>Fyrre magazine logo</VisuallyHidden>
+          </Link>
 
-        <NavbarMobile isOpen={isOpen} />
-      </Container>
+          <HamburgerMenu isOpen={isOpen} onClick={handleIsOpen} />
+        </Container>
 
-      <NavbarDesktop />
-    </nav>
+        <NavbarDesktop />
+      </nav>
+
+      <NavbarMobile isOpen={isOpen} />
+    </React.Fragment>
   );
 };
 
