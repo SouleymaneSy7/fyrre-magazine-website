@@ -29,25 +29,41 @@
   /* Font Size */
   --text-*: initial;
   --text-fs-heading-x-large: clamp(4rem, 1.8667rem + 10.6667vw, 12rem);
+  --text-fs-heading-x-large--line-height: 1;
   --text-fs-heading-large: clamp(2.5rem, 1.0333rem + 7.3333vw, 8rem);
+  --text-fs-heading-large--line-height: 1;
   --text-fs-heading-medium: clamp(2.5rem, 1.5667rem + 4.6667vw, 6rem);
+  --text-fs-heading-medium--line-height: 1;
   --text-fs-heading-1: clamp(2.5rem, 2.1rem + 2vw, 4rem);
+  --text-fs-heading-1--line-height: 70px;
   --text-fs-heading-2: clamp(2rem, 1.7333rem + 1.3333vw, 3rem);
+  --text-fs-heading-2--line-height: 58px;
   --text-fs-heading-3: clamp(1.5rem, 1.3667rem + 0.6667vw, 2rem);
+  --text-fs-heading-3--line-height: 40px;
   --text-fs-heading-4: clamp(1.25rem, 1.1833rem + 0.3333vw, 1.5rem);
+  --text-fs-heading-4--line-height: 34px;
   --text-fs-heading-5: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --text-fs-heading-5--line-height: 28px;
   --text-fs-heading-6: clamp(1rem, 1rem + 0vw, 1rem);
+  --text-fs-heading-6--line-height: 24px;
 
   --text-fs-text-default: clamp(0.875rem, 0.8417rem + 0.1667vw, 1rem);
+  --text-fs-text-default--line-height: 28px;
   --text-fs-text-large: 1.25rem;
+  --text-fs-text-large--line-height: 34px;
   --text-fs-text-medium: 1.125rem;
+  --text-fs-text-medium--line-height: 32px;
   --text-fs-text-regular: 1rem;
+  --text-fs-text-regular--line-height: 28px;
   --text-fs-text-small: 0.875rem;
+  --text-fs-text-small--line-height: 24px;
   --text-fs-text-tiny: 0.75rem;
+  --text-fs-text-tiny--line-height: 20px;
 
   --text-fs-paragraph: var(--text-fs-text-default);
   --text-fs-link: var(--text-fs-text-default);
   --text-fs-quote-large: clamp(1.75rem, 1.4167rem + 1.6667vw, 3rem);
+  --text-fs-quote-large--line-height: 58px;
   --text-fs-quote: var(--text-fs-text-medium);
 
   /* Font Weight */
@@ -73,6 +89,37 @@
   --container-large: 95rem;
   --container-medium: 64rem;
   --container-small: 48rem;
+
+  /* Animation */
+  --animate-*: initial;
+  --animate-marquee-move-text: marquee-move-text 10s linear infinite forwards;
+
+  /* Keyframes */
+  @keyframes marquee-move-text {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@utility container {
+  @apply px-6 mx-auto;
+
+  @variant md {
+    @apply max-w-[var(--container-small)] px-8;
+  }
+
+  @variant lg {
+    @apply max-w-[var(--container-medium)] px-10;
+  }
+
+  @variant xl {
+    @apply max-w-[var(--container-medium)] px-20;
+  }
+
+  @variant 2xl {
+    @apply max-w-[var(--container-large)] px-20;
+  }
 }
 
 @layer base {
@@ -158,9 +205,43 @@
   .blockquote-large {
     @apply text-fs-quote-large font-semi-bold leading-[120%] p-xx-large pr-0 border-b border-t border-border-default-clr;
   }
+
+  .marquee-fade-out-horizontal {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      var(--color-primary-clr) 1.5rem,
+      var(--color-primary-clr) calc(100% - 1.5rem),
+      transparent
+    );
+  }
+
+  .marquee-text-track {
+    @apply animate-marquee-move-text;
+  }
+
+  #mobile-navigation-link:nth-child(3) {
+    @apply border-none;
+  }
 }
 
 @layer components {
+  .visually-hidden {
+    display: inline-block;
+    position: absolute;
+
+    height: 0.0625rem;
+    width: 0.0625rem;
+
+    border: 0;
+    clip: rect(0 0 0 0);
+
+    margin: -0.0625rem;
+    padding: 0;
+
+    overflow: hidden;
+  }
+
   .form-input {
     @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
   }
@@ -171,26 +252,5 @@
 
   .form-select {
     @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
-  }
-}
-
-.marquee-fade-out-horizontal {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    var(--color-primary-clr) 1.5rem,
-    var(--color-primary-clr) calc(100% - 1.5rem),
-    transparent
-  );
-}
-
-.marquee-text-track {
-  animation: marquee-move-text var(--speed, 25s) linear infinite
-    var(--direction, forwards);
-}
-
-@keyframes marquee-move-text {
-  to {
-    transform: translateX(-50%);
   }
 }
