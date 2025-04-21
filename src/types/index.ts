@@ -38,3 +38,9 @@ export type MarqueePropsType = {
   marqueeText: string[];
   title?: string;
 };
+
+export type HamburgerMenuPropsType = {
+  isOpen: boolean;
+  onClick: () => void;
+  classNames?: string;
+};
