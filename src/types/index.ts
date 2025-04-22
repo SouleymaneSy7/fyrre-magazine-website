@@ -44,3 +44,8 @@ export type HamburgerMenuPropsType = {
   onClick: () => void;
   classNames?: string;
 };
+
+export type IconPropsType = {
+  delegatedProps: React.SVGProps<SVGSVGElement>;
+  fill: string;
+};
