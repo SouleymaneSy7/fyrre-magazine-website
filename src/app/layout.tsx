@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
 
 const generalSans = localFont({
   src: [
@@ -67,7 +69,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${generalSans.variable} antialiased`}>{children}</body>
+      <body className={`${generalSans.variable} antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
