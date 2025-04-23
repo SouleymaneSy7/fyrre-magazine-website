@@ -95,7 +95,7 @@
 
   /* Animation */
   --animate-*: initial;
-  --animate-marquee-move-text: marquee-move-text 10s linear infinite forwards;
+  --animate-marquee-move-text: marquee-move-text 25s linear infinite forwards;
 
   /* Keyframes */
   @keyframes marquee-move-text {
