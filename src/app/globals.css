@@ -113,15 +113,15 @@
   }
 
   @variant lg {
-    @apply max-w-[var(--container-medium)] px-10;
+    @apply max-w-[var(--container-medium)] px-0;
   }
 
   @variant xl {
-    @apply max-w-[var(--container-medium)] px-20;
+    @apply max-w-[var(--container-medium)] px-0;
   }
 
   @variant 2xl {
-    @apply max-w-[var(--container-large)] px-20;
+    @apply max-w-[var(--container-large)] px-0;
   }
 }
 
