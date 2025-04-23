@@ -9,7 +9,7 @@ const list = ["List Element 1", "List Element 2", "List Element 3"];
 
 export default function page() {
   return (
-    <main className="w-full h-screen space-y-6 p-8 mb-8">
+    <main className="space-y-6 p-8 mb-8">
       <h1 className="heading-1 uppercase">Style Guide</h1>
       <hr />
 
