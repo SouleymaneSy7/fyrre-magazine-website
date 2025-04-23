@@ -9,7 +9,12 @@ const list = ["List Element 1", "List Element 2", "List Element 3"];
 
 export default function page() {
   return (
-    <main className="container | space-y-6 p-8 mb-8">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container | space-y-6 p-8 mb-8"
+    >
       <h1 className="heading-1 uppercase">Style Guide</h1>
       <hr />
 
@@ -124,7 +129,7 @@ export default function page() {
 
       <h3 className="heading-4">Marquee With Title</h3>
       <Marquee
-        title="Marquee Title"
+        title="Title"
         marqueeText={[
           "Sample Text 1",
           "Sample Text 2",
