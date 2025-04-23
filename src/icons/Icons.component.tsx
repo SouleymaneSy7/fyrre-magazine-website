@@ -199,3 +199,42 @@ export const LogoIcon: React.FC<IconPropsType> = ({
     </svg>
   );
 };
+
+export const FacebookIcon: React.FC<IconPropsType> = ({
+  fill = "none",
+  ...delegatedProps
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      {...delegatedProps}
+    >
+      <path fill={fill} d="M0 0h24v24H0z" />
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+    </svg>
+  );
+};
+
+export const QuoteIcon: React.FC<IconPropsType> = ({
+  fill = "#000",
+  ...delegatedProps
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="44"
+      height="28"
+      fill="none"
+      {...delegatedProps}
+    >
+      <path
+        fill={fill}
+        d="M0 16.306C0 23.122 3.84 27.25 9.696 27.25c5.184 0 8.64-3.168 8.64-7.68 0-3.936-3.072-7.104-7.296-7.104-.672 0-1.44.096-2.208.288 1.152-4.416 5.472-6.624 11.136-5.856V.178C9.312-1.262 0 6.226 0 16.306Zm23.232 0c0 6.816 3.84 10.944 9.696 10.944 5.28 0 8.64-3.168 8.64-7.68 0-3.936-3.072-7.104-7.296-7.104-.672 0-1.44.096-2.208.288C33.216 8.338 37.536 6.13 43.2 6.898V.178c-10.656-1.44-19.968 6.048-19.968 16.128Z"
+      />
+    </svg>
+  );
+};
