@@ -27,11 +27,11 @@ const Footer: React.FC = () => {
             <h2 className="heading-medium uppercase">{FooterHeading}</h2>
           </div>
 
-          <Form className="w-full max-w-[480px] flex flex-col gap-3 lg:flex-row lg:gap-4">
+          <Form className="w-full flex flex-col gap-3 lg:max-w-[480px]  lg:flex-row lg:gap-4">
             <Inputs
               type="email"
               placeholder="Email"
-              className="form-input | max-w-[360px] bg-default-clr text-text-muted-clr"
+              className="form-input | lg:max-w-[360px] bg-default-clr text-text-muted-clr"
             />
             <Button
               variant="default"
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           </Link>
           <hr className="lg:hidden bg-text-muted-clr" />
 
-          <div className="space-y-4 w-full max-w-[300px]">
+          <div className="space-y-4 w-full lg:max-w-[300px]">
             <hr className="hidden lg:block bg-text-muted-clr" />
             <List
               items={FooterLinkList1}
@@ -61,10 +61,10 @@ const Footer: React.FC = () => {
                 );
               }}
             />
-            <hr className="lg:hidden border-text-muted-clr" />
+            <hr className="lg:hidden bg-text-muted-clr" />
           </div>
 
-          <div className="space-y-4 w-full max-w-[300px]">
+          <div className="space-y-4 w-full lg:max-w-[300px]">
             <hr className="hidden lg:block  bg-text-muted-clr" />
             <List
               items={FooterLinkList2}
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             <hr className="lg:hidden bg-text-muted-clr" />
           </div>
 
-          <div className="space-y-4 w-full max-w-[300px]">
+          <div className="space-y-4 w-full lg:max-w-[300px]">
             <hr className="hidden lg:block bg-text-muted-clr" />
             <List
               items={FooterLinkList3}
@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col-reverse items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="lg:flex lg:items-center lg:gap-5">
             <p>
               © Design by{" "}
