@@ -1,8 +1,9 @@
 "use client";
 
 import * as React from "react";
+import clsx from "clsx";
 
-const SkipToContent: React.FC = () => {
+const SkipToContent = () => {
   const [isVisible, setIsVisible] = React.useState(false);
 
   const handleFocus = () => setIsVisible(true);
@@ -24,10 +25,12 @@ const SkipToContent: React.FC = () => {
     }
   };
 
-  React.useEffect(() => {
-    const skipLink = document.getElementById("skip-to-content-link");
-    if (skipLink) {
-      document.body.insertAdjacentElement("afterbegin", skipLink);
+  React.useLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      const skipLink = document.getElementById("skip-to-content-link");
+      if (skipLink) {
+        document.body.insertAdjacentElement("afterbegin", skipLink);
+      }
     }
   }, []);
 
@@ -35,9 +38,9 @@ const SkipToContent: React.FC = () => {
     <a
       id="skip-to-content-link"
       href="#main-content"
-      className={`fixed top-4 left-4 z-50 bg-primary-clr rounded-none font-medium uppercase tracking-widest text-fs-text-small text-text-inversed-clr focus-visible:ring-primary-clr focus-visible:ring-rounded-none py-3 px-5 transition-transform duration-300 ease-in-out
+      className={clsx(`fixed top-4 left-4 z-50 bg-primary-clr rounded-none font-medium uppercase tracking-widest text-fs-text-small text-text-inversed-clr focus-visible:ring-primary-clr focus-visible:ring-rounded-none py-3 px-5 transition-transform duration-300 ease-in-out
         ${isVisible ? "transform translate-y-0" : "transform -translate-y-50"}
-      `}
+      `)}
       onFocus={handleFocus}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
