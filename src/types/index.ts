@@ -46,6 +46,5 @@ export type HamburgerMenuPropsType = {
 };
 
 export type IconPropsType = {
-  delegatedProps: React.SVGProps<SVGSVGElement>;
-  fill: string;
-};
+  fill?: string;
+} & React.ComponentPropsWithoutRef<"svg">;
