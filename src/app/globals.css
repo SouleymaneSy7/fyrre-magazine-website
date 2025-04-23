@@ -29,41 +29,44 @@
   /* Font Size */
   --text-*: initial;
   --text-fs-heading-x-large: clamp(4rem, 1.8667rem + 10.6667vw, 12rem);
-  --text-fs-heading-x-large--line-height: 1;
   --text-fs-heading-large: clamp(2.5rem, 1.0333rem + 7.3333vw, 8rem);
-  --text-fs-heading-large--line-height: 1;
   --text-fs-heading-medium: clamp(2.5rem, 1.5667rem + 4.6667vw, 6rem);
-  --text-fs-heading-medium--line-height: 1;
   --text-fs-heading-1: clamp(2.5rem, 2.1rem + 2vw, 4rem);
-  --text-fs-heading-1--line-height: 70px;
   --text-fs-heading-2: clamp(2rem, 1.7333rem + 1.3333vw, 3rem);
-  --text-fs-heading-2--line-height: 58px;
   --text-fs-heading-3: clamp(1.5rem, 1.3667rem + 0.6667vw, 2rem);
-  --text-fs-heading-3--line-height: 40px;
   --text-fs-heading-4: clamp(1.25rem, 1.1833rem + 0.3333vw, 1.5rem);
-  --text-fs-heading-4--line-height: 34px;
   --text-fs-heading-5: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  --text-fs-heading-5--line-height: 28px;
   --text-fs-heading-6: clamp(1rem, 1rem + 0vw, 1rem);
-  --text-fs-heading-6--line-height: 24px;
 
   --text-fs-text-default: clamp(0.875rem, 0.8417rem + 0.1667vw, 1rem);
-  --text-fs-text-default--line-height: 28px;
   --text-fs-text-large: 1.25rem;
-  --text-fs-text-large--line-height: 34px;
   --text-fs-text-medium: 1.125rem;
-  --text-fs-text-medium--line-height: 32px;
   --text-fs-text-regular: 1rem;
-  --text-fs-text-regular--line-height: 28px;
   --text-fs-text-small: 0.875rem;
-  --text-fs-text-small--line-height: 24px;
   --text-fs-text-tiny: 0.75rem;
-  --text-fs-text-tiny--line-height: 20px;
+
+  /* line height */
+  --leading-*: initial;
+  --leading-heading-x-large: 100%;
+  --leading-heading-large: 100%;
+  --leading-heading-medium: 100%;
+  --leading-heading-1: 4.375rem;
+  --leading-heading-2: 3.625rem;
+  --leading-heading-3: 2.5rem;
+  --leading-heading-4: 2.125rem;
+  --leading-heading-5: 1.75rem;
+  --leading-heading-6: 1.5rem;
+  --leading-text-default: 1.75rem;
+  --leading-text-large: 2.125rem;
+  --leading-text-medium: 2rem;
+  --leading-text-regular: 1.75rem;
+  --leading-text-small: 1.5rem;
+  --leading-text-tiny: 1.25rem;
+  --leading-quote-large: 3.625rem;
 
   --text-fs-paragraph: var(--text-fs-text-default);
   --text-fs-link: var(--text-fs-text-default);
   --text-fs-quote-large: clamp(1.75rem, 1.4167rem + 1.6667vw, 3rem);
-  --text-fs-quote-large--line-height: 58px;
   --text-fs-quote: var(--text-fs-text-medium);
 
   /* Font Weight */
@@ -124,7 +127,7 @@
 
 @layer base {
   body {
-    @apply bg-default-clr text-text-default-clr text-fs-text-default font-general-sans font-regular overflow-x-hidden;
+    @apply bg-default-clr text-text-default-clr text-fs-text-default leading-text-default font-general-sans font-regular overflow-x-hidden;
   }
 
   h1,
@@ -139,71 +142,71 @@
 
 @layer utilities {
   .heading-x-large {
-    @apply text-fs-heading-x-large font-semi-bold leading-[100%];
+    @apply text-fs-heading-x-large font-semi-bold leading-heading-x-large;
   }
 
   .heading-large {
-    @apply text-fs-heading-large font-semi-bold;
+    @apply text-fs-heading-large font-semi-bold leading-heading-large;
   }
 
   .heading-medium {
-    @apply text-fs-heading-medium font-semi-bold;
+    @apply text-fs-heading-medium font-semi-bold leading-heading-medium;
   }
 
   .heading-1 {
-    @apply text-fs-heading-1 font-semi-bold;
+    @apply text-fs-heading-1 font-semi-bold leading-heading-1;
   }
 
   .heading-2 {
-    @apply text-fs-heading-2;
+    @apply text-fs-heading-2 leading-heading-2;
   }
 
   .heading-3 {
-    @apply text-fs-heading-3;
+    @apply text-fs-heading-3 leading-heading-3;
   }
 
   .heading-4 {
-    @apply text-fs-heading-4;
+    @apply text-fs-heading-4 leading-heading-4;
   }
 
   .heading-5 {
-    @apply text-fs-heading-5;
+    @apply text-fs-heading-5 leading-heading-5;
   }
 
   .heading-6 {
-    @apply text-fs-heading-6;
+    @apply text-fs-heading-6 leading-heading-6;
   }
 
   .text-large {
-    @apply text-fs-text-large;
+    @apply text-fs-text-large leading-text-large;
   }
 
   .text-medium {
-    @apply text-fs-text-medium;
+    @apply text-fs-text-medium leading-text-medium;
   }
 
   .text-regular {
-    @apply text-fs-text-regular;
+    @apply text-fs-text-regular leading-text-regular;
   }
 
   .text-small {
-    @apply text-fs-text-small;
+    @apply text-fs-text-small leading-text-small;
   }
 
   .text-tiny {
-    @apply text-fs-text-tiny;
+    @apply text-fs-text-tiny leading-text-tiny;
   }
 
   .text-italic {
-    @apply text-fs-paragraph italic;
+    @apply text-fs-paragraph italic leading-text-default;
   }
 
   .text-link {
-    @apply text-fs-paragraph underline;
+    @apply text-fs-paragraph underline leading-text-default;
   }
 
   .blockquote-large {
-    @apply text-fs-quote-large font-semi-bold leading-[120%] p-xx-large pr-0 border-b border-t border-border-default-clr;
+    @apply text-fs-quote-large font-semi-bold leading-quote-large p-xx-large pr-0 border-b border-t border-border-default-clr;
   }
 
   .marquee-fade-out-horizontal {
