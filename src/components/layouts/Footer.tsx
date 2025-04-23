@@ -9,6 +9,7 @@ import {
   FooterLinkList3,
 } from "@/constants";
 import { LogoIcon } from "@/icons/Icons.component";
+import { FooterMarquee } from "@/constants/marqueeConstants";
 
 import Marquee from "./Marquee";
 import List from "../common/List";
@@ -20,7 +21,7 @@ import VisuallyHidden from "../common/VisuallyHidden";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-primary-clr">
-      <Marquee marqueeText={["text-1", "Text-2", "Text-3"]} />
+      <Marquee marqueeText={FooterMarquee} />
       <section className="container | text-text-inversed-clr py-x-huge space-y-x-huge lg:space-y-24 lg:pt-32">
         <div className="flex flex-col gap-x-large lg:flex-row lg:items-center lg:justify-between mb-32">
           <div className="w-full max-w-[832px]">
