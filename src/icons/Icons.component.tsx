@@ -3,7 +3,7 @@ import { IconPropsType } from "@/types";
 
 export const AppleIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
@@ -63,7 +63,7 @@ export const ArrowLeftIcon = (
 
 export const InstagramIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
@@ -83,7 +83,7 @@ export const InstagramIcon: React.FC<IconPropsType> = ({
 
 export const RSSIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
@@ -103,7 +103,7 @@ export const RSSIcon: React.FC<IconPropsType> = ({
 
 export const SoundCloudIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
@@ -123,7 +123,7 @@ export const SoundCloudIcon: React.FC<IconPropsType> = ({
 
 export const SpotifyIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
@@ -143,7 +143,7 @@ export const SpotifyIcon: React.FC<IconPropsType> = ({
 
 export const TwitterIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
@@ -163,7 +163,7 @@ export const TwitterIcon: React.FC<IconPropsType> = ({
 
 export const YoutubeIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
@@ -182,7 +182,7 @@ export const YoutubeIcon: React.FC<IconPropsType> = ({
 };
 export const LogoIcon: React.FC<IconPropsType> = ({
   fill = "#000",
-  delegatedProps,
+  ...delegatedProps
 }) => {
   return (
     <svg
