@@ -12,7 +12,7 @@ const Marquee: React.FC<MarqueePropsType> = ({ marqueeText, title }) => {
             {marqueeText.map((name: string, index: number) => (
               <span
                 key={index}
-                className="text-fs-paragraph text-text-inversed-clr"
+                className="text-fs-paragraph text-text-inversed-clr font-semi-bold uppercase"
               >
                 {name}
               </span>
@@ -39,7 +39,7 @@ const Marquee: React.FC<MarqueePropsType> = ({ marqueeText, title }) => {
           {marqueeText.map((name: string, index: number) => (
             <span
               key={index}
-              className="text-fs-paragraph text-text-inversed-clr"
+              className="text-fs-paragraph text-text-inversed-clr font-semi-bold uppercase"
             >
               {name}
             </span>
