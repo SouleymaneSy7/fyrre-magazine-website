@@ -53,3 +53,17 @@ export type CardPropsType = {
   children: React.ReactNode;
   classNames: string;
 } & React.ComponentPropsWithoutRef<"div">;
+
+export type FrontmatterType = {
+  title: string;
+  date: string;
+  preview?: string;
+  slug?: string;
+  [key: string]: string | number | boolean | undefined;
+};
+
+export type ArticleDataType = {
+  frontmatter: FrontmatterType;
+  content: string;
+  slug: string;
+};
