@@ -48,3 +48,8 @@ export type HamburgerMenuPropsType = {
 export type IconPropsType = {
   fill?: string;
 } & React.ComponentPropsWithoutRef<"svg">;
+
+export type CardPropsType = {
+  children: React.ReactNode;
+  classNames: string;
+} & React.ComponentPropsWithoutRef<"div">;
