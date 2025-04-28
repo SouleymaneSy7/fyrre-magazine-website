@@ -67,3 +67,8 @@ export type ArticleDataType = {
   content: string;
   slug: string;
 };
+
+export type HeadlinePropsType = {
+  imageSrc: string;
+  altText: string;
+};
