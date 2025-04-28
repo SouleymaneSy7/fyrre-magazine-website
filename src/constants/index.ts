@@ -5,6 +5,8 @@ import {
   YoutubeIcon,
 } from "@/icons/Icons.component";
 
+const navbarList = ["magazine", "podcast", "author"];
+
 const FooterHeading = "Design News to your inbox";
 
 const FooterLinkList1 = [
@@ -74,4 +76,5 @@ export {
   FooterLinkList2,
   FooterLinkList3,
   socialIcons,
+  navbarList,
 };
