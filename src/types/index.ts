@@ -59,11 +59,14 @@ export type FrontmatterType = {
   date: string;
   preview?: string;
   slug?: string;
+};
+
+export type FrontmatterDefaultType = {
   [key: string]: string | number | boolean | undefined;
 };
 
 export type ArticleDataType = {
-  frontmatter: FrontmatterType;
+  frontmatter: FrontmatterType | FrontmatterDefaultType;
   content: string;
   slug: string;
 };
@@ -71,4 +74,8 @@ export type ArticleDataType = {
 export type HeadlinePropsType = {
   imageSrc: string;
   altText: string;
+};
+
+export type DateFormatterPropsType = {
+  dateString: string;
 };
