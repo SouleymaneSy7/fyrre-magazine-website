@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="container relative z-50 p-6">
+    <header className="container relative z-50 py-6">
       <Navbar />
     </header>
   );
