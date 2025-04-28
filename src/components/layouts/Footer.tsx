@@ -14,6 +14,7 @@ import { FooterMarquee } from "@/constants/marqueeConstants";
 import Marquee from "./Marquee";
 import List from "../common/List";
 import Form from "../common/Form";
+import Title from "../common/Title";
 import Inputs from "../common/Input";
 import Button from "../common/Button";
 import VisuallyHidden from "../common/VisuallyHidden";
@@ -25,7 +26,9 @@ const Footer: React.FC = () => {
       <section className="container | text-text-inversed-clr py-x-huge space-y-x-huge lg:space-y-24 lg:pt-32">
         <div className="flex flex-col gap-x-large lg:flex-row lg:items-center lg:justify-between mb-32">
           <div className="w-full max-w-[832px]">
-            <h2 className="heading-medium uppercase">{FooterHeading}</h2>
+            <Title level="h2" className="heading-medium uppercase">
+              {FooterHeading}
+            </Title>
           </div>
 
           <Form className="w-full flex flex-col gap-3 lg:max-w-[480px]  lg:flex-row lg:gap-4">
@@ -99,19 +102,20 @@ const Footer: React.FC = () => {
           <div className="lg:flex lg:items-center lg:gap-5">
             <p>
               © Design by{" "}
-              <Link href={"https://gola.io"} className="text-link">
+              <a href={"https://gola.io"} className="text-link" target="_blank">
                 Pawel Gola
-              </Link>
+              </a>
             </p>
 
             <p>
               Code by{" "}
-              <Link
+              <a
                 href={"https://github.com/souleymanesy7"}
                 className="text-link"
+                target="_blank"
               >
                 Souleymane Sy
-              </Link>
+              </a>
             </p>
           </div>
 
