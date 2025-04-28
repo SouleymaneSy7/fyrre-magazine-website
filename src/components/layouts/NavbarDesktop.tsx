@@ -4,22 +4,9 @@ import Link from "next/link";
 import Container from "../common/Container";
 import VisuallyHidden from "../common/VisuallyHidden";
 
-import {
-  InstagramIcon,
-  LogoIcon,
-  RSSIcon,
-  TwitterIcon,
-  YoutubeIcon,
-} from "@/icons/Icons.component";
 import List from "../common/List";
-
-const navbarList = ["Magazine", "Podcast", "Author"];
-const socialIcons = [
-  { id: 0, Icon: InstagramIcon, href: "https://instagram.com" },
-  { id: 1, Icon: TwitterIcon, href: "https://x.com" },
-  { id: 2, Icon: YoutubeIcon, href: "https://youtube.com" },
-  { id: 3, Icon: RSSIcon, href: "https://rss.com" },
-];
+import { LogoIcon } from "@/icons/Icons.component";
+import { navbarList, socialIcons } from "@/constants";
 
 const NavbarDesktop = () => {
   return (
@@ -39,7 +26,9 @@ const NavbarDesktop = () => {
           renderItem={(item) => {
             return (
               <li key={item}>
-                <Link href={`/${item}`}>{item}</Link>
+                <Link href={`/${item}`} className="capitalize">
+                  {item}
+                </Link>
               </li>
             );
           }}
