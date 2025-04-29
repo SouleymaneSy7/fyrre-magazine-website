@@ -10,7 +10,7 @@ const Card: React.FC<CardPropsType> = ({
   ...delegatedProps
 }) => {
   return (
-    <Container as={"div"} className={clsx(classNames)} {...delegatedProps}>
+    <Container as={"article"} className={clsx(classNames)} {...delegatedProps}>
       {children}
     </Container>
   );
