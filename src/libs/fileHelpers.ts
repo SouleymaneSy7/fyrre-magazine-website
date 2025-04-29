@@ -1,6 +1,7 @@
-import { promises as fs } from "fs";
+import * as React from "react";
 import path from "path";
 import matter from "gray-matter";
+import { promises as fs } from "fs";
 
 import { ArticleDataType, FrontmatterType } from "@/types";
 import { CONTENTS_DIR, MDX_EXTENSION } from "@/constants";
@@ -99,10 +100,10 @@ const getArticlesList = async (
   }
 };
 
-const loadArticle = async (
+const loadArticle = React.cache(async function loadArticle(
   articlePath: string,
   slug: string
-): Promise<ArticleDataType> => {
+): Promise<ArticleDataType> {
   validatePath(slug);
   validatePath(articlePath);
 
@@ -126,6 +127,6 @@ const loadArticle = async (
       `${articlePath}/${slug}`
     );
   }
-};
+});
 
 export { loadArticle, getArticlesList };
