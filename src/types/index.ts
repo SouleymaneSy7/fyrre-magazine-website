@@ -117,3 +117,12 @@ export type AuthorContentPropsType = {
 };
 
 export type PagePropsType = Promise<{ authorSlug: string }>;
+
+export type PodcastSummaryCardPropsType = {
+  podcastEpisode: number;
+  podcastCover: string;
+  podcastTitle: string | undefined;
+  podcastDate: string | undefined;
+  podcastDuration: string | undefined;
+  podcastSlug: string;
+};
