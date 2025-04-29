@@ -99,3 +99,21 @@ export type SyngleNavPropsType = {
   goBackHref: string;
   title: string;
 };
+
+export type AuthorSideBarPropsType = {
+  imageSrc: string;
+  authorJob: string | undefined;
+  authorCity: string | undefined;
+  authorSocials: {
+    id: string;
+    Icon: React.FC<IconPropsType>;
+    href: string;
+  }[];
+};
+
+export type AuthorContentPropsType = {
+  authorName: string;
+  MDXContent: string;
+};
+
+export type PagePropsType = { params: { authorSlug: string } };
