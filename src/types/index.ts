@@ -116,4 +116,7 @@ export type AuthorContentPropsType = {
   MDXContent: string;
 };
 
-export type PagePropsType = { params: { authorSlug: string } };
+export type PagePropsType = {
+  params: { authorSlug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
