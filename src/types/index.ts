@@ -90,7 +90,7 @@ export type DateFormatterPropsType = {
 export type AuthorSummaryCardPropsType = {
   imageSrc: string;
   authorName: string;
-  authorJob: string;
-  authorCity: string;
+  authorJob: string | undefined;
+  authorCity: string | undefined;
   authorSlug: string;
 };
