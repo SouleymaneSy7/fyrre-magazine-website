@@ -3,9 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 
 import { ArticleDataType, FrontmatterType } from "@/types";
-
-const CONTENTS_DIR = "contents";
-const MDX_EXTENSION = ".mdx";
+import { CONTENTS_DIR, MDX_EXTENSION } from "@/constants";
 
 class FileHelperError extends Error {
   constructor(message: string, public path?: string) {
@@ -17,6 +15,29 @@ class FileHelperError extends Error {
 const validatePath = (path: string): void => {
   if (!path || typeof path !== "string") {
     throw new FileHelperError("Path must be a non-empty string");
+  }
+};
+
+const getFile = async (filePath: string): Promise<string> => {
+  validatePath(filePath);
+
+  try {
+    return await fs.readFile(path.join(process.cwd(), filePath), "utf8");
+  } catch (error) {
+    throw new FileHelperError(`Error while reading file: ${error}`, filePath);
+  }
+};
+
+const getDirectory = async (filePath: string): Promise<string[]> => {
+  validatePath(filePath);
+
+  try {
+    return await fs.readdir(path.join(process.cwd(), filePath));
+  } catch (error) {
+    throw new FileHelperError(
+      `Error while reading directory: ${error}`,
+      filePath
+    );
   }
 };
 
@@ -45,11 +66,31 @@ const getArticlesList = async (
       })
     );
 
-    return articles.sort(
-      (a, b) =>
-        new Date(b.frontmatter.date).getTime() -
-        new Date(a.frontmatter.date).getTime()
-    );
+    if (articlePath === "authors") {
+      return articles.sort((a, b) => {
+        const idA = a.frontmatter.id || 0;
+        const idB = b.frontmatter.id || 0;
+        return idA - idB;
+      });
+    }
+
+    if (articlePath === "magazine") {
+      return articles.sort((a, b) => {
+        const dateA = new Date(a.frontmatter.date || "").getTime();
+        const dateB = new Date(b.frontmatter.date || "").getTime();
+        return dateB - dateA;
+      });
+    }
+
+    if (articlePath === "podcast") {
+      return articles.sort((a, b) => {
+        const episodeA = a.frontmatter.episode || 0;
+        const episodeB = b.frontmatter.episode || 0;
+        return episodeB - episodeA;
+      });
+    }
+
+    return articles;
   } catch (error) {
     throw new FileHelperError(
       `Error while retrieving articles: ${error}`,
@@ -58,9 +99,9 @@ const getArticlesList = async (
   }
 };
 
-const loadArticles = async (
-  slug: string,
-  articlePath: string
+const loadArticle = async (
+  articlePath: string,
+  slug: string
 ): Promise<ArticleDataType> => {
   validatePath(slug);
   validatePath(articlePath);
@@ -87,27 +128,4 @@ const loadArticles = async (
   }
 };
 
-const getFile = async (filePath: string): Promise<string> => {
-  validatePath(filePath);
-
-  try {
-    return await fs.readFile(path.join(process.cwd(), filePath), "utf8");
-  } catch (error) {
-    throw new FileHelperError(`Error while reading file: ${error}`, filePath);
-  }
-};
-
-const getDirectory = async (filePath: string): Promise<string[]> => {
-  validatePath(filePath);
-
-  try {
-    return await fs.readdir(path.join(process.cwd(), filePath));
-  } catch (error) {
-    throw new FileHelperError(
-      `Error while reading directory: ${error}`,
-      filePath
-    );
-  }
-};
-
-export { loadArticles, getArticlesList };
+export { loadArticle, getArticlesList };
