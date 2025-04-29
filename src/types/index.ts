@@ -94,3 +94,8 @@ export type AuthorSummaryCardPropsType = {
   authorCity: string | undefined;
   authorSlug: string;
 };
+
+export type SyngleNavPropsType = {
+  goBackHref: string;
+  title: string;
+};
