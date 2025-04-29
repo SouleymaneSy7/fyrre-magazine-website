@@ -55,18 +55,25 @@ export type CardPropsType = {
 } & React.ComponentPropsWithoutRef<"div">;
 
 export type FrontmatterType = {
+  id: number;
   title: string;
-  date: string;
+  name: string;
+  episode: number;
+  image: string;
+  cover_image: string;
+  author_image: string;
+  date?: string;
+  job?: string;
+  city?: string;
+  author?: string;
+  duration?: string;
+  read_time?: string;
+  tag?: string;
   preview?: string;
-  slug?: string;
-};
-
-export type FrontmatterDefaultType = {
-  [key: string]: string | number | boolean | undefined;
 };
 
 export type ArticleDataType = {
-  frontmatter: FrontmatterType | FrontmatterDefaultType;
+  frontmatter: FrontmatterType;
   content: string;
   slug: string;
 };
