@@ -51,7 +51,7 @@ export type IconPropsType = {
 
 export type CardPropsType = {
   children: React.ReactNode;
-  classNames: string;
+  classNames?: string;
 } & React.ComponentPropsWithoutRef<"div">;
 
 export type FrontmatterType = {
@@ -85,4 +85,12 @@ export type HeadlinePropsType = {
 
 export type DateFormatterPropsType = {
   dateString: string;
+};
+
+export type AuthorSummaryCardPropsType = {
+  imageSrc: string;
+  authorName: string;
+  authorJob: string;
+  authorCity: string;
+  authorSlug: string;
 };
