@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Metadata } from "next";
 
-import { PagePropsType } from "@/types";
 import { loadArticle } from "@/libs/fileHelpers";
 import { followSocials } from "@/constants/authorsConstants";
 
@@ -9,11 +8,18 @@ import Container from "@/components/common/Container";
 import SingleNav from "@/components/layouts/SingleNav";
 import AuthorSideBar from "@/components/layouts/AuthorSideBar";
 import AuthorContents from "@/components/layouts/AuthorContents";
+import { PagePropsType } from "@/types";
 
 export async function generateMetadata({
   params,
-}: PagePropsType): Promise<Metadata> {
-  const { frontmatter } = await loadArticle("authors", params.authorSlug);
+}: {
+  params: PagePropsType;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { frontmatter } = await loadArticle(
+    "authors",
+    resolvedParams.authorSlug
+  );
 
   return {
     title: `${frontmatter.name} | Fyrre - Modern Magazine & Digital Content Hub `,
@@ -21,7 +27,9 @@ export async function generateMetadata({
   };
 }
 
-const Page: React.FC<PagePropsType> = async ({ params }) => {
+const Page = async (props: { params: PagePropsType }) => {
+  const params = await props.params;
+
   const { frontmatter, content } = await loadArticle(
     "authors",
     params.authorSlug
