@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Metadata } from "next";
 
 import { PagePropsType } from "@/types";
 import { loadArticle } from "@/libs/fileHelpers";
@@ -11,7 +12,7 @@ import AuthorContents from "@/components/layouts/AuthorContents";
 
 export async function generateMetadata({
   params,
-}: PagePropsType): Promise<{ title: string; description: string }> {
+}: PagePropsType): Promise<Metadata> {
   const { frontmatter } = await loadArticle("authors", params.authorSlug);
 
   return {
@@ -20,7 +21,7 @@ export async function generateMetadata({
   };
 }
 
-const page: React.FC<PagePropsType> = async ({ params }) => {
+const Page: React.FC<PagePropsType> = async ({ params }) => {
   const { frontmatter, content } = await loadArticle(
     "authors",
     params.authorSlug
@@ -44,4 +45,4 @@ const page: React.FC<PagePropsType> = async ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
