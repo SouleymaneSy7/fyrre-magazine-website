@@ -4,6 +4,16 @@ import {
   YoutubeIcon,
 } from "@/icons/Icons.component";
 
+const followSocials = [
+  {
+    id: crypto.randomUUID(),
+    Icon: InstagramIcon,
+    href: "https://instagram.com",
+  },
+  { id: crypto.randomUUID(), Icon: TwitterIcon, href: "https://twitter.com" },
+  { id: crypto.randomUUID(), Icon: YoutubeIcon, href: "https://youtube.com" },
+];
+
 const authorList = [
   {
     id: crypto.randomUUID(),
@@ -331,6 +341,7 @@ const avatarProfile6 = {
 };
 
 export {
+  followSocials,
   authorList,
   avaterProfile1,
   avatarProfile2,
