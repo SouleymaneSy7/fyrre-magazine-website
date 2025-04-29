@@ -5,6 +5,9 @@ import {
   YoutubeIcon,
 } from "@/icons/Icons.component";
 
+export const CONTENTS_DIR = "contents";
+export const MDX_EXTENSION = ".mdx";
+
 const navbarList = ["magazine", "podcast", "authors"];
 
 const FooterHeading = "Design News to your inbox";
