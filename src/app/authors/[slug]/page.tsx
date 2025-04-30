@@ -18,7 +18,7 @@ export async function generateMetadata({
   const resolvedParams = await params;
   const { frontmatter } = await loadArticle(
     "authors",
-    resolvedParams.authorSlug
+    resolvedParams.slug
   );
 
   return {
@@ -32,7 +32,7 @@ const Page = async (props: { params: PagePropsType }) => {
 
   const { frontmatter, content } = await loadArticle(
     "authors",
-    params.authorSlug
+    params.slug
   );
 
   return (
