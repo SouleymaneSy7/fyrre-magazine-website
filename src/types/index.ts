@@ -146,7 +146,7 @@ export type PodcastSidebarPropsType = {
   }[];
 };
 
-export type MagazineSummaryCardPropsType = {
+export type MagazineType = {
   magazineDate: string | undefined;
   magazineTag: string | undefined;
   magazineCover: string;
@@ -155,5 +155,10 @@ export type MagazineSummaryCardPropsType = {
   magazineAuthor: string | undefined;
   magazineAuthorLink: string | undefined;
   magazineReadTime: string | undefined;
+};
+
+export type MagazineSummaryCardPropsType = MagazineType & {
   magazineSlug: string;
 };
+
+export type MagazinePostHeroPropsType = MagazineType;
