@@ -24,6 +24,8 @@ const homepageHero = {
   date: "September 22, 2022",
   readTime: "50 Min",
   tag: "street art",
+  postLink: "/magazine/dont-close-your-eyes",
+  authorLink: "/authors/cristofer-vaccaro",
 };
 
 const homepageMagazineSummaryList = [
@@ -37,6 +39,8 @@ const homepageMagazineSummaryList = [
     readTime: "10 mn",
     tag: "art",
     coverImage: "/assets/images/magazine-cover-1.webp",
+    postLink: "/magazine/hope-dies-last",
+    authorLink: "/authors/anne-henry",
   },
   {
     id: crypto.randomUUID(),
@@ -48,6 +52,8 @@ const homepageMagazineSummaryList = [
     readTime: "10 mn",
     tag: "sculptures",
     coverImage: "/assets/images/magazine-cover-3.webp",
+    postLink: "/magazine/the-best-art-museums",
+    authorLink: "/authors/louise-jensen",
   },
   {
     id: crypto.randomUUID(),
@@ -59,6 +65,8 @@ const homepageMagazineSummaryList = [
     readTime: "35 Min",
     tag: "art",
     coverImage: "/assets/images/magazine-cover-4.webp",
+    postLink: "/magazine/the-devil-is-in-the-details",
+    authorLink: "/authors/jane-cooper",
   },
   {
     id: crypto.randomUUID(),
@@ -70,6 +78,8 @@ const homepageMagazineSummaryList = [
     readTime: "12 Min",
     tag: "art",
     coverImage: "/assets/images/magazine-cover-5.webp",
+    postLink: "/magazine/an-indestructible-hope",
+    authorLink: "/authors/louise-jensen",
   },
   {
     id: crypto.randomUUID(),
@@ -81,6 +91,8 @@ const homepageMagazineSummaryList = [
     read_time: "5 Min",
     tag: "street art",
     cover_image: "/assets/images/magazine-cover-6.webp",
+    postLink: "/magazine/street-art-festival",
+    authorLink: "/authors/cristofer-vaccaro",
   },
   {
     id: crypto.randomUUID(),
@@ -92,6 +104,8 @@ const homepageMagazineSummaryList = [
     read_time: "30 Min",
     tag: "sculptures",
     coverImage: "/assets/images/magazine-cover-7.webp",
+    postLink: "/magazine/the-chains-of-our-lives",
+    authorLink: "/authors/louise-jensen",
   },
 ];
 
