@@ -162,3 +162,16 @@ export type MagazineSummaryCardPropsType = MagazineType & {
 };
 
 export type MagazinePostHeroPropsType = MagazineType;
+
+export type MagazinePostSidebarPropsType = {
+  magazineAuthorName: string | undefined;
+  magazineAuthorImage: string;
+  magazineDate: string | undefined;
+  magazineReadTime: string | undefined;
+  magazineSocials: {
+    id: string;
+    name: string;
+    Icon: React.FC<IconPropsType>;
+    href: string;
+  }[];
+};
