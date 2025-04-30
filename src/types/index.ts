@@ -145,3 +145,15 @@ export type PodcastSidebarPropsType = {
     href: string;
   }[];
 };
+
+export type MagazineSummaryCardPropsType = {
+  magazineDate: string | undefined;
+  magazineTag: string | undefined;
+  magazineCover: string;
+  magazineTitle: string;
+  magazinePreview: string | undefined;
+  magazineAuthor: string | undefined;
+  magazineAuthorLink: string | undefined;
+  magazineReadTime: string | undefined;
+  magazineSlug: string;
+};
