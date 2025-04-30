@@ -126,3 +126,22 @@ export type PodcastSummaryCardPropsType = {
   podcastDuration: string | undefined;
   podcastSlug: string;
 };
+
+export type PodcastSidebarPropsType = {
+  imageSrc: string;
+  podcastTitle: string;
+  podcastDate: string | undefined;
+  podcastDuration: string | undefined;
+  podcastListenSocials: {
+    id: string;
+    name: string;
+    Icon: React.FC<IconPropsType>;
+    href: string;
+  }[];
+  podcastShareSocials: {
+    id: string;
+    name: string;
+    Icon: React.FC<IconPropsType>;
+    href: string;
+  }[];
+};
