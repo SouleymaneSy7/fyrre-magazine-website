@@ -1,6 +1,10 @@
 import {
+  AppleIcon,
+  FacebookIcon,
   InstagramIcon,
   RSSIcon,
+  SoundCloudIcon,
+  SpotifyIcon,
   TwitterIcon,
   YoutubeIcon,
 } from "@/icons/Icons.component";
@@ -73,6 +77,48 @@ const socialIcons = [
   { id: 3, Icon: RSSIcon, href: "https://rss.com" },
 ];
 
+const listenSocials = [
+  {
+    id: crypto.randomUUID(),
+    name: "Spotify",
+    Icon: SpotifyIcon,
+    href: "https://open.spotify.com/",
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "Apple Podcast",
+    Icon: AppleIcon,
+    href: "https://podcasts.apple.com/",
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "SoundCloud",
+    Icon: SoundCloudIcon,
+    href: "https://soundcloud.com/",
+  },
+];
+
+const shareSocials = [
+  {
+    id: crypto.randomUUID(),
+    name: "Instagram",
+    Icon: InstagramIcon,
+    href: "https://www.instagram.com/",
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "Twitter",
+    Icon: TwitterIcon,
+    href: "https://twitter.com/",
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "Facebook",
+    Icon: FacebookIcon,
+    href: "https://www.facebook.com/",
+  },
+];
+
 export {
   FooterHeading,
   FooterLinkList1,
@@ -80,4 +126,6 @@ export {
   FooterLinkList3,
   socialIcons,
   navbarList,
+  listenSocials,
+  shareSocials,
 };
