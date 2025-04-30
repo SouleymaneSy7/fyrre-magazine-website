@@ -116,7 +116,7 @@ export type AuthorContentPropsType = {
   MDXContent: string;
 };
 
-export type PagePropsType = Promise<{ authorSlug: string }>;
+export type PagePropsType = Promise<{ slug: string }>;
 
 export type PodcastSummaryCardPropsType = {
   podcastEpisode: number;
