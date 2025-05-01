@@ -21,18 +21,20 @@ const page = async () => {
         altText="authors headline text svg"
       />
 
-      {avatarList.map((author) => {
-        return (
-          <AuthorSummaryCard
-            key={author.slug}
-            authorSlug={author.slug}
-            imageSrc={author.frontmatter.image}
-            authorName={author.frontmatter.name}
-            authorJob={author.frontmatter.job}
-            authorCity={author.frontmatter.city}
-          />
-        );
-      })}
+      <div className="pt-14 md:pt-20 lg:pt-24">
+        {avatarList.map((author) => {
+          return (
+            <AuthorSummaryCard
+              key={author.slug}
+              authorSlug={author.slug}
+              imageSrc={author.frontmatter.image}
+              authorName={author.frontmatter.name}
+              authorJob={author.frontmatter.job}
+              authorCity={author.frontmatter.city}
+            />
+          );
+        })}
+      </div>
     </main>
   );
 };
