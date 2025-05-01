@@ -18,8 +18,12 @@ export async function generateMetadata({
   const { frontmatter } = await loadArticle("podcast", resolvedParams.slug);
 
   return {
-    title: `${frontmatter.title} | Fyrre - Modern Magazine & Digital Content Hub.`,
-    description: frontmatter.preview || "No description available",
+    title: frontmatter.title
+      ? `${frontmatter.title} | Fyrre - Modern Magazine & Digital Content Hub.`
+      : "Podcast Post | Fyrre - Modern Magazine & Digital Content Hub.",
+    description:
+      frontmatter.preview ||
+      "Discover Fyrre - Your destination for curated articles, insightful blogs, and engaging podcasts. A clean, modern platform delivering quality content across multiple formats.",
   };
 }
 
