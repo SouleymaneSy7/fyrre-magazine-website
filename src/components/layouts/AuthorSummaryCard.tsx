@@ -16,7 +16,7 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
   authorSlug,
 }) => {
   return (
-    <Card className="flex flex-col gap-4 pb-12 mb-12 border-b border-b-primary-clr md:flex-row md:items-start md:justify-between md:gap-8 lg:gap-12 lg:items-center">
+    <Card className="flex flex-col gap-4 pb-12 mb-12 border-b border-b-primary-clr md:flex-row md:items-start md:justify-between md:gap-8 lg:gap-12 lg:items-center nth-last-[1]:border-b-0 nth-last-[1]:pb-0 nth-last-[1]:mb-0">
       <Link
         href={`/authors/${authorSlug}`}
         className="inline-block w-[150px] h-[150px] rounded-full overflow-hidden md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
@@ -38,7 +38,7 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
           </Title>
         </Link>
 
-        <div className="flex flex-col gap-2 mt-4 lg:flex-row lg:m-0">
+        <div className="flex flex-col gap-2 mt-4 lg:flex-row lg:gap-10 lg:m-0">
           <p>
             <strong>Job</strong> <span>{authorJob}</span>
           </p>
