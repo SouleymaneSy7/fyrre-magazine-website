@@ -1,11 +1,12 @@
 import * as React from "react";
-import Card from "../common/Card";
-import Container from "../common/Container";
 import Image from "next/image";
-import Title from "../common/Title";
 import Link from "next/link";
-import { ArrowRightIcon } from "@/icons/Icons.component";
+
+import Card from "../common/Card";
+import Title from "../common/Title";
+
 import { AuthorSummaryCardPropsType } from "@/types";
+import LinkWithArrow from "./LinkWithArrow";
 
 const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
   imageSrc,
@@ -17,17 +18,19 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
   return (
     <Card>
       <div>
-        <Container as={"div"}>
+        <Link href={`/magazine/${authorSlug}`}>
           <Image
             priority
             width={100}
             height={100}
             src={imageSrc}
-            alt={`avatar profile image for ${authorName}`}
+            alt={`${authorName} - profile image.`}
           />
-        </Container>
+        </Link>
 
-        <Title level="h2">{authorName}</Title>
+        <Link href={`/magazine/${authorSlug}`}>
+          <Title level="h2">{authorName}</Title>
+        </Link>
       </div>
 
       <div>
@@ -38,9 +41,7 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
           <strong>Job</strong> <span>{authorCity}</span>
         </p>
 
-        <Link href={`/authors/${authorSlug}`}>
-          <span>About</span> <ArrowRightIcon />
-        </Link>
+        <LinkWithArrow linkHref={`/authors/${authorSlug}`} linkTitle="About" />
       </div>
     </Card>
   );
