@@ -14,6 +14,24 @@ export const MDX_EXTENSION = ".mdx";
 
 const navbarList = ["magazine", "podcast", "authors"];
 
+const navbarMobileList = [
+  {
+    id: 0,
+    href: "/magazine",
+    title: "Magazine",
+  },
+  {
+    id: 1,
+    href: "/podcast",
+    title: "Podcast",
+  },
+  {
+    id: 2,
+    href: "/authors",
+    title: "Authors",
+  },
+];
+
 const homepageHero = {
   id: crypto.randomUUID(),
   CoverImage: "/assets/images/magazine-cover-2.webp",
@@ -317,6 +335,7 @@ export {
   FooterLinkList3,
   socialIcons,
   navbarList,
+  navbarMobileList,
   listenSocials,
   shareSocials,
   homepageMagazineSummaryList,
