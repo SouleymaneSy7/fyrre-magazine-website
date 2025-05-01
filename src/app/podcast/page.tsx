@@ -21,19 +21,21 @@ const Page = async () => {
         altText="podcast headline text svg illustration"
       />
 
-      {podcastList.map(({ frontmatter, slug }) => {
-        return (
-          <PodcastSummaryCard
-            key={slug}
-            podcastSlug={slug}
-            podcastDate={frontmatter.date}
-            podcastCover={frontmatter.image}
-            podcastEpisode={frontmatter.episode}
-            podcastDuration={frontmatter.duration}
-            podcastTitle={frontmatter.title}
-          />
-        );
-      })}
+      <div className="pt-14 md:pt-20 lg:pt-24">
+        {podcastList.map(({ frontmatter, slug }) => {
+          return (
+            <PodcastSummaryCard
+              key={slug}
+              podcastSlug={slug}
+              podcastDate={frontmatter.date}
+              podcastCover={frontmatter.image}
+              podcastEpisode={frontmatter.episode}
+              podcastDuration={frontmatter.duration}
+              podcastTitle={frontmatter.title}
+            />
+          );
+        })}
+      </div>
     </main>
   );
 };
