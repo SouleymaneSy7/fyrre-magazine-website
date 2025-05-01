@@ -21,7 +21,7 @@ import VisuallyHidden from "../common/VisuallyHidden";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary-clr">
+    <footer className="bg-primary-clr mt-18 lg:mt-32">
       <Marquee marqueeText={FooterMarquee} />
       <section className="container | text-text-inversed-clr py-x-huge space-y-x-huge lg:space-y-24 lg:pt-32">
         <div className="flex flex-col gap-x-large lg:flex-row lg:items-center lg:justify-between mb-32">
@@ -33,6 +33,7 @@ const Footer: React.FC = () => {
 
           <Form className="w-full flex flex-col gap-3 lg:max-w-[480px]  lg:flex-row lg:gap-4">
             <Inputs
+              name="email"
               type="email"
               placeholder="Email"
               className="form-input | lg:max-w-[360px] bg-default-clr text-text-muted-clr"
