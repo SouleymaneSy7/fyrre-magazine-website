@@ -23,6 +23,7 @@ const getFile = async (filePath: string): Promise<string> => {
   validatePath(filePath);
 
   try {
+    console.log("Getting the file: ", filePath);
     return await fs.readFile(path.join(process.cwd(), filePath), "utf8");
   } catch (error) {
     throw new FileHelperError(`Error while reading file: ${error}`, filePath);
@@ -100,7 +101,7 @@ const getArticlesList = async (
   }
 };
 
-const loadArticle = React.cache(async function loadArticle(
+async function loadArticle(
   articlePath: string,
   slug: string
 ): Promise<ArticleDataType> {
@@ -127,6 +128,6 @@ const loadArticle = React.cache(async function loadArticle(
       `${articlePath}/${slug}`
     );
   }
-});
+}
 
 export { loadArticle, getArticlesList };
