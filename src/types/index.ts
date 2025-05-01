@@ -39,6 +39,10 @@ export type MarqueePropsType = {
   title?: string;
 };
 
+export type NavbarMobilePropsType = {
+  isOpen: boolean;
+};
+
 export type HamburgerMenuPropsType = {
   isOpen: boolean;
   onClick: () => void;
