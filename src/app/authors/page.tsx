@@ -1,7 +1,15 @@
+import { Metadata } from "next";
+
 import { getArticlesList } from "@/libs/fileHelpers";
 
 import Headline from "@/components/layouts/Headline";
 import AuthorSummaryCard from "@/components/layouts/AuthorSummaryCard";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Authors | Fyrre - Modern Magazine & Digital Content Hub",
+  };
+}
 
 const page = async () => {
   const avatarList = await getArticlesList("authors");
