@@ -48,7 +48,7 @@ const PodcastSummaryCard: React.FC<PodcastSummaryCardPropsType> = ({
         </p>
       </div>
 
-      <LinkWithArrow linkHref={`/authors/${podcastSlug}`} linkTitle="Listen" />
+      <LinkWithArrow linkHref={`/podcast/${podcastSlug}`} linkTitle="Listen" />
     </Card>
   );
 };
