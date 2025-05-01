@@ -43,3 +43,8 @@ next-env.d.ts
 # local files
 /not-importants
 note.md
+
+#frontmatter
+frontmatter.json
+/.frontmatter.json
+/.frontmatter
