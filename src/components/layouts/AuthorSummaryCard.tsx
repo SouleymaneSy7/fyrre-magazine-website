@@ -18,7 +18,7 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
   return (
     <Card>
       <div>
-        <Link href={`/magazine/${authorSlug}`}>
+        <Link href={`/authors/${authorSlug}`}>
           <Image
             priority
             width={100}
@@ -28,7 +28,7 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
           />
         </Link>
 
-        <Link href={`/magazine/${authorSlug}`}>
+        <Link href={`/authors/${authorSlug}`}>
           <Title level="h2">{authorName}</Title>
         </Link>
       </div>
