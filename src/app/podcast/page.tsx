@@ -1,7 +1,15 @@
+import { Metadata } from "next";
+
 import { getArticlesList } from "@/libs/fileHelpers";
 
 import Headline from "@/components/layouts/Headline";
 import PodcastSummaryCard from "@/components/layouts/PodcastSummaryCard";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Podcast | Fyrre - Modern Magazine & Digital Content Hub",
+  };
+}
 
 const Page = async () => {
   const podcastList = await getArticlesList("podcast");
