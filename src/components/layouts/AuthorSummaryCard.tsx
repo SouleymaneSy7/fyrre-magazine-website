@@ -16,31 +16,39 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
   authorSlug,
 }) => {
   return (
-    <Card>
-      <div>
-        <Link href={`/authors/${authorSlug}`}>
-          <Image
-            priority
-            width={100}
-            height={100}
-            src={imageSrc}
-            alt={`${authorName} - profile image.`}
-          />
+    <Card className="flex flex-col gap-4 pb-12 mb-12 border-b border-b-primary-clr md:flex-row md:items-start md:justify-between md:gap-8 lg:gap-12 lg:items-center">
+      <Link
+        href={`/authors/${authorSlug}`}
+        className="inline-block w-[150px] h-[150px] rounded-full overflow-hidden md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
+      >
+        <Image
+          priority
+          width={150}
+          height={150}
+          src={imageSrc}
+          alt={`${authorName} - profile image.`}
+          className="w-full h-full aspect-square object-cover"
+        />
+      </Link>
+
+      <div className="grow lg:flex lg:gap-12 lg:items-center">
+        <Link href={`/authors/${authorSlug}`} className="grow">
+          <Title level="h2" className="heading-3">
+            {authorName}
+          </Title>
         </Link>
 
-        <Link href={`/authors/${authorSlug}`}>
-          <Title level="h2">{authorName}</Title>
-        </Link>
+        <div className="flex flex-col gap-2 mt-4 lg:flex-row lg:m-0">
+          <p>
+            <strong>Job</strong> <span>{authorJob}</span>
+          </p>
+          <p>
+            <strong>City</strong> <span>{authorCity}</span>
+          </p>
+        </div>
       </div>
 
       <div>
-        <p>
-          <strong>Job</strong> <span>{authorJob}</span>
-        </p>
-        <p>
-          <strong>Job</strong> <span>{authorCity}</span>
-        </p>
-
         <LinkWithArrow linkHref={`/authors/${authorSlug}`} linkTitle="About" />
       </div>
     </Card>
