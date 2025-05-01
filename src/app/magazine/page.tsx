@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import { getArticlesList } from "@/libs/fileHelpers";
 import { magazineCategories } from "@/constants/magazineConstants";
 
@@ -8,6 +10,11 @@ import Headline from "@/components/layouts/Headline";
 import Container from "@/components/common/Container";
 import MagazineSummaryCard from "@/components/layouts/MagazineSummaryCard";
 
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Magazine | Fyrre - Modern Magazine & Digital Content Hub",
+  };
+}
 const Page = async () => {
   const magazinePost = await getArticlesList("magazine");
 
