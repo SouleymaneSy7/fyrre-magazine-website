@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <React.Fragment>
       <nav
-        className="border-border-default-clr relative z-50 pb-5 border-b"
+        className="border-border-default-clr relative z-50 pb-5 border-b lg:pb-6"
         role="navigation"
       >
         <Container
