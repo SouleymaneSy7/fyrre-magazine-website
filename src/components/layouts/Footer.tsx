@@ -103,7 +103,12 @@ const Footer: React.FC = () => {
           <div className="lg:flex lg:items-center lg:gap-5">
             <p>
               © Design by{" "}
-              <a href={"https://gola.io"} className="text-link" target="_blank">
+              <a
+                href="https://gola.io"
+                className="text-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Pawel Gola
               </a>
             </p>
@@ -111,9 +116,10 @@ const Footer: React.FC = () => {
             <p>
               Code by{" "}
               <a
-                href={"https://github.com/souleymanesy7"}
+                href="https://github.com/souleymanesy7"
                 className="text-link"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Souleymane Sy
               </a>
@@ -129,9 +135,13 @@ const Footer: React.FC = () => {
 
                 return (
                   <li key={item.id}>
-                    <Link href={item.href}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Icon width={24} height={24} fill="#fff" />
-                    </Link>
+                    </a>
                   </li>
                 );
               }}
