@@ -175,3 +175,9 @@ export type MagazinePostSidebarPropsType = {
     href: string;
   }[];
 };
+
+export type LinkWithArrowPropsType = {
+  linkHref: string;
+  linkTitle: string;
+  Icon?: React.FC<IconPropsType>;
+};
