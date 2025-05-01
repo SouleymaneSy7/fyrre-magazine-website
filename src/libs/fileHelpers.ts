@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import path from "path";
 import matter from "gray-matter";
 import { promises as fs } from "fs";
@@ -22,7 +24,6 @@ const getFile = async (filePath: string): Promise<string> => {
   validatePath(filePath);
 
   try {
-    console.log("Getting the file: ", filePath);
     return await fs.readFile(path.join(process.cwd(), filePath), "utf8");
   } catch (error) {
     throw new FileHelperError(`Error while reading file: ${error}`, filePath);
@@ -100,7 +101,7 @@ const getArticlesList = async (
   }
 };
 
-async function loadArticle(
+const loadArticle = React.cache(async function loadArticle(
   articlePath: string,
   slug: string
 ): Promise<ArticleDataType> {
@@ -127,6 +128,6 @@ async function loadArticle(
       `${articlePath}/${slug}`
     );
   }
-}
+});
 
 export { loadArticle, getArticlesList };
