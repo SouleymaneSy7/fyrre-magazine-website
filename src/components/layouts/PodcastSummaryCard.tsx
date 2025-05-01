@@ -6,7 +6,7 @@ import Card from "../common/Card";
 import Title from "../common/Title";
 
 import { PodcastSummaryCardPropsType } from "@/types";
-import { ArrowRightIcon } from "@/icons/Icons.component";
+import LinkWithArrow from "./LinkWithArrow";
 
 const PodcastSummaryCard: React.FC<PodcastSummaryCardPropsType> = ({
   podcastEpisode,
@@ -28,7 +28,7 @@ const PodcastSummaryCard: React.FC<PodcastSummaryCardPropsType> = ({
               alt={`${podcastTitle} - cover image.`}
               className="w-full h-full aspect-square"
               width={100}
-               height={100}
+              height={100}
             />
           </div>
         </Link>
@@ -48,9 +48,7 @@ const PodcastSummaryCard: React.FC<PodcastSummaryCardPropsType> = ({
         </p>
       </div>
 
-      <Link href={`/authors/${podcastSlug}`}>
-        <span>Listen</span> <ArrowRightIcon />
-      </Link>
+      <LinkWithArrow linkHref={`/authors/${podcastSlug}`} linkTitle="Listen" />
     </Card>
   );
 };
