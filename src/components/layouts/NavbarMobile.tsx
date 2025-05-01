@@ -9,35 +9,15 @@ import Container from "../common/Container";
 
 import { ArrowRightIcon } from "@/icons/Icons.component";
 import useOnDisabledBodyScroll from "@/hooks/useOnDisabledBodyScroll";
-
-type NavbarMobilePropsType = {
-  isOpen: boolean;
-};
-
-const navbarMobileList = [
-  {
-    id: 0,
-    href: "/Magazine",
-    title: "Magazine",
-  },
-  {
-    id: 1,
-    href: "/Podcast",
-    title: "Podcast",
-  },
-  {
-    id: 2,
-    href: "/Author",
-    title: "Author",
-  },
-];
+import { NavbarMobilePropsType } from "@/types";
+import { navbarMobileList } from "@/constants";
 
 const NavbarMobile: React.FC<NavbarMobilePropsType> = ({ isOpen }) => {
   useOnDisabledBodyScroll(isOpen);
 
   return (
     <React.Fragment>
-      <FocusLock returnFocus={false}>
+      <FocusLock returnFocus={true}>
         <Container
           as={"div"}
           className={clsx(
