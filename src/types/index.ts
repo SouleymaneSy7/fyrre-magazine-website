@@ -184,4 +184,5 @@ export type LinkWithArrowPropsType = {
   linkHref: string;
   linkTitle: string;
   Icon?: React.FC<IconPropsType>;
+  classNames?: string;
 };
