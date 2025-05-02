@@ -12,22 +12,25 @@ import { FooterHeading, homepagePopularPostList } from "@/constants";
 
 const HomepageSidebar = () => {
   return (
-    <Container as={"aside"}>
+    <Container as={"aside"} className="md:hidden lg:block">
       <div>
-        <p>PrintMagazine</p>
+        <div className="mb-5 lg:mb-6">
+          <p className="heading-6 uppercase font-semi-bold">PrintMagazine</p>
+          <h3 className="heading-2">03 / 2022</h3>
+        </div>
 
-        <h3>03 / 2022</h3>
-
-        <div>
+        <div className="w-full h-full mb-4">
           <Image
-            width={100}
-            height={100}
+            width={500}
+            height={625}
             alt="cover image"
             src="/assets/images/cover-image.jpeg"
+            className="w-full h-full aspect-square object-contain"
+            sizes="(max-width: 479px) 90vw, (max-width: 991px) 100vw, 18vw"
           />
         </div>
 
-        <Button variant="default" size="default">
+        <Button variant="default" size="default" className="w-full">
           Buy Now
         </Button>
       </div>
