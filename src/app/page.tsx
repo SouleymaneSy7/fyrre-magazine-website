@@ -24,7 +24,10 @@ export default function Home() {
 
       <HomepageHero />
 
-      <Container as="section">
+      <Container
+        as="section"
+        className="grid gap-24 lg:grid-cols-[3fr 1fr] lg:grid-rows-1"
+      >
         <HomepageMagazineList />
         <HomepageSidebar />
       </Container>

@@ -13,38 +13,46 @@ const HomepageMagazineList = () => {
     <Container as={"div"}>
       {homepageMagazineSummaryList.map((item) => {
         return (
-          <Card key={item.id}>
-            <Link href={item.postLink}>
+          <Card
+            key={item.id}
+            className="flex flex-col gap-4 mb-8 pb-8 border-b border-b-primary-clr nth-last-[1]:border-b-0 nth-last-[1]:pb-0 nth-last-[1]:mb-0 md:flex-row md:gap-6 lg:mb-12 lg:pb-12 lg:gap-8"
+          >
+            <Link href={item.postLink} className="w-full h-full block">
               <Image
-                width={100}
-                height={100}
+                width={500}
+                height={500}
                 src={item.coverImage}
                 alt={`${item.title} - magazine cover.`}
+                className="w-full h-full aspect-square object-cover"
               />
             </Link>
 
-            <div>
-              <Title level="h2">{item.title}</Title>
-              <p>{item.preview}</p>
+            <div className="lg:flex lg:flex-col lg:justify-between">
+              <div className=" mb-4">
+                <Title level="h2" className="heading-3">
+                  {item.title}
+                </Title>
+                <p>{item.preview}</p>
+              </div>
 
-              <div>
-                <div>
-                  <p>
+              <div className="flex flex-col gap-4 mt-8 lg:flex-row lg:justify-between lg:items-center">
+                <div className="flex flex-col gap-2 lg:flex-row lg:gap-6">
+                  <div className="flex gap-2">
                     <strong>Text</strong>
-                    <Link href={item.authorLink}>
+                    <Link href={item.authorLink} className="text-link">
                       <span>{item.author}</span>
                     </Link>
-                  </p>
+                  </div>
 
-                  <p>
+                  <div className="flex gap-2">
                     <strong>Date</strong>
                     <span>{item.date}</span>
-                  </p>
+                  </div>
 
-                  <p>
+                  <div className="flex gap-2">
                     <strong>Read</strong>
                     <span>{item.readTime}</span>
-                  </p>
+                  </div>
                 </div>
 
                 <div>
