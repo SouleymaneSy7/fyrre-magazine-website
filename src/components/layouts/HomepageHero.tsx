@@ -24,7 +24,7 @@ const HomepageHero = () => {
   return (
     <Container
       as={"div"}
-      className="flex flex-col gap-4 mb-12 mt-8 md:flex-col-reverse md:mt-12 lg:mt-16 lg:gap-12"
+      className="flex flex-col gap-4 mb-12 mt-8 md:flex-col-reverse md:mt-12 lg:mt-16 lg:gap-12 lg:mb-24"
     >
       <Link
         href={postLink}
