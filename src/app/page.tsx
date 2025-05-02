@@ -18,7 +18,9 @@ export default function Home() {
         altText="art life headline text svg illustration"
       />
 
-      <Marquee title="News:" marqueeText={HeaderMarquee} />
+      <div className="mb-5 lg:mb-8">
+        <Marquee title="News:" marqueeText={HeaderMarquee} />
+      </div>
 
       <HomepageHero />
 
