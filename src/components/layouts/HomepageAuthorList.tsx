@@ -31,11 +31,14 @@ const HomepageAuthorList = () => {
         />
       </div>
 
-      <div>
+      <div className="home-authors-grid | pt-px pl-px">
         {homepageAuthorsList.map(
           ({ id, city, image, job, name, authorHref }) => {
             return (
-              <Card key={id} className="flex gap-8 items-center p-8 border border-primary-clr border-collapse">
+              <Card
+                key={id}
+                className="flex gap-8 flex-wrap items-center p-8 border border-primary-clr -ml-px -mt-px"
+              >
                 <Link
                   href={`/authors/${authorHref}`}
                   className="inline-block w-[150px] h-[150px] rounded-full overflow-hidden md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
@@ -50,9 +53,11 @@ const HomepageAuthorList = () => {
                 </Link>
 
                 <div>
-                  <Title level="h3" className="heading-3 mb-4">
-                    {name}
-                  </Title>
+                  <Link href={`/authors/${authorHref}`}>
+                    <Title level="h3" className="heading-3 mb-4">
+                      {name}
+                    </Title>
+                  </Link>
 
                   <div>
                     <div className="flex items-baseline gap-2">
