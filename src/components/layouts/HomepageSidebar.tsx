@@ -12,7 +12,7 @@ import { FooterHeading, homepagePopularPostList } from "@/constants";
 
 const HomepageSidebar = () => {
   return (
-    <Container as={"aside"} className="md:hidden lg:block">
+    <Container as={"aside"} className="col-span-2 md:hidden lg:block lg:col-span-1">
       <div>
         <div className="mb-5 lg:mb-6">
           <p className="heading-6 uppercase font-semi-bold">PrintMagazine</p>
