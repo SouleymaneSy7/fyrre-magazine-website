@@ -32,13 +32,13 @@ const HomepagePodcastList = () => {
         />
       </div>
 
-      <div className="border-collapse">
+      <div className="homepage-podcast-grid pt-px pl-px mb-18 md:mb-32 lg:mb-48">
         {homepagePodcastList.map(
           ({ id, title, coverImage, date, duration }) => {
             return (
               <Card
                 key={id}
-                className="p-6 lg:p-8 border border-primary-clr border-collapse"
+                className="p-6 lg:p-8 border border-primary-clr -ml-px -mt-px"
               >
                 <div className="w-full h-auto mb-5 md:mb-6 lg:mb-8">
                   <Image
