@@ -26,7 +26,7 @@ export default function Home() {
 
       <Container
         as="section"
-        className="grid gap-24 lg:grid-cols-[3fr 1fr] lg:grid-rows-1 mb-14 md:mb-20 lg:mb-24"
+        className="grid gap-24 lg:grid-cols-3 lg:grid-rows-1 mb-14 md:mb-20 lg:mb-24"
       >
         <HomepageMagazineList />
         <HomepageSidebar />
