@@ -32,34 +32,44 @@ const HomepageAuthorList = () => {
       </div>
 
       <div>
-        {homepageAuthorsList.map(({ id, city, image, job, name }) => {
-          return (
-            <Card key={id}>
-              <div>
-                <Image
-                  src={image}
-                  alt={`${name} - profile image.`}
-                  width={100}
-                  height={100}
-                />
-              </div>
-
-              <div>
-                <Title level="h3">{name}</Title>
-
-                <div>
-                  <strong>Job</strong>
-                  <span>{job}</span>
-                </div>
+        {homepageAuthorsList.map(
+          ({ id, city, image, job, name, authorHref }) => {
+            return (
+              <Card key={id} className="flex gap-8 items-center p-8 border border-primary-clr border-collapse">
+                <Link
+                  href={`/authors/${authorHref}`}
+                  className="inline-block w-[150px] h-[150px] rounded-full overflow-hidden md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
+                >
+                  <Image
+                    src={image}
+                    alt={`${name} - profile image.`}
+                    width={500}
+                    height={500}
+                    className="w-full h-full aspect-square object-cover"
+                  />
+                </Link>
 
                 <div>
-                  <strong>City</strong>
-                  <span>{city}</span>
+                  <Title level="h3" className="heading-3 mb-4">
+                    {name}
+                  </Title>
+
+                  <div>
+                    <div className="flex items-baseline gap-2">
+                      <strong>Job</strong>
+                      <span>{job}</span>
+                    </div>
+
+                    <div className="flex items-baseline gap-2">
+                      <strong>City</strong>
+                      <span>{city}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          );
-        })}
+              </Card>
+            );
+          }
+        )}
       </div>
     </Container>
   );
