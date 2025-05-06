@@ -72,13 +72,13 @@ const HomepageSidebar = () => {
         </div>
       </div>
 
-      <Card className="pt-7 px-8 pb-8 bg-text-muted-clr">
-        <Title level="h3">Newsletter</Title>
+      <Card className="pt-7 px-8 pb-8 bg-muted-bg-clr">
+        <Title level="h3" className="heading-6 uppercase mb-2">Newsletter</Title>
 
-        <Title level="h2">{FooterHeading}</Title>
+        <Title level="h2" className="heading-3 mb-4">{FooterHeading}</Title>
 
-        <Form>
-          <Inputs type="email" placeholder="Email" className="form-input" />
+        <Form className="flex flex-col gap-2">
+          <Inputs type="email" placeholder="Email" className="form-input | border-none bg-default-clr" />
           <Button variant="default">Sign Up</Button>
         </Form>
       </Card>
