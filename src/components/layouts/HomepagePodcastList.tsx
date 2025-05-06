@@ -1,17 +1,35 @@
 import React from "react";
-import Container from "../common/Container";
-import Title from "../common/Title";
-import LinkWithArrow from "./LinkWithArrow";
-import { homepagePodcastList } from "@/constants";
-import Card from "../common/Card";
 import Image from "next/image";
+
+import Card from "../common/Card";
+import Title from "../common/Title";
+import Container from "../common/Container";
+import LinkWithArrow from "./LinkWithArrow";
+
+import { homepagePodcastList } from "@/constants";
+import { ArrowRightIcon } from "@/icons/Icons.component";
+import Link from "next/link";
 
 const HomepagePodcastList = () => {
   return (
     <Container as={"section"}>
-      <div>
-        <Title level="h2">Podcast</Title>
-        <LinkWithArrow linkHref={"/podcast"} linkTitle={"All Episodes"} />
+      <div className="flex items-center justify-between pt-6 md:pt-10 lg:pt-12 border-t border-primary-clr mb-14 md:mb-20 lg:mb-24">
+        <Title level="h2" className="heading-large uppercase">
+          Podcasts
+        </Title>
+
+        <Link
+          href={"/podcast"}
+          className="inline-block md:hidden lg:hidden xl:hidden"
+        >
+          <ArrowRightIcon />
+        </Link>
+
+        <LinkWithArrow
+          linkHref={"/podcast"}
+          linkTitle={"All Episodes"}
+          classNames="hidden md:flex"
+        />
       </div>
 
       <div>
