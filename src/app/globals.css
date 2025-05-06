@@ -258,3 +258,13 @@
     @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
   }
 }
+
+.homepage-podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+}
+
+.home-authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 600px), 1fr));
+}
