@@ -185,6 +185,7 @@ const homepageAuthorsList = [
     job: "Artist",
     city: "Berlin",
     image: "/assets/images/author-profile-1.png",
+    authorHref: "jakob-gronberg",
   },
   {
     id: crypto.randomUUID(),
@@ -192,6 +193,7 @@ const homepageAuthorsList = [
     job: "Artist",
     city: "Stockholm",
     image: "/assets/images/author-profile-2.png",
+    authorHref: "louise-jensen",
   },
   {
     id: crypto.randomUUID(),
@@ -199,6 +201,7 @@ const homepageAuthorsList = [
     job: "Photographer",
     city: "New York",
     image: "/assets/images/author-profile-3.png",
+    authorHref: "anne-henry",
   },
   {
     id: crypto.randomUUID(),
@@ -206,6 +209,7 @@ const homepageAuthorsList = [
     job: "Columnist",
     city: "Copenhagen",
     image: "/assets/images/author-profile-4.png",
+    authorHref: "anna-nielsen",
   },
   {
     id: crypto.randomUUID(),
@@ -213,6 +217,7 @@ const homepageAuthorsList = [
     job: "Artist",
     city: "Berlin",
     image: "/assets/images/author-profile-5.png",
+    authorHref: "jane-cooper",
   },
   {
     id: crypto.randomUUID(),
@@ -220,6 +225,7 @@ const homepageAuthorsList = [
     job: "Artist",
     city: "Lisabon",
     image: "/assets/images/author-profile-6.png",
+    authorHref: "cristofer-vaccaro",
   },
 ];
 
