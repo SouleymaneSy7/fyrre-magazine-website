@@ -25,10 +25,16 @@ const Page = async () => {
         altText="magazine headline text svg illustration"
       />
 
-      <Container as={"div"}>
-        <Title level="h3">Categories</Title>
+      <Container
+        as={"div"}
+        className="flex justify-between items-center flex-wrap gap-4 py-14 md:py-20 lg:py-24"
+      >
+        <Title level="h3" className="heading-6 uppercase">
+          Categories
+        </Title>
 
         <List
+          className="flex items-center gap-2 flex-wrap"
           items={magazineCategories}
           renderItem={(item) => {
             return (
@@ -42,22 +48,24 @@ const Page = async () => {
         />
       </Container>
 
-      {magazinePost.map(({ frontmatter, slug }) => {
-        return (
-          <MagazineSummaryCard
-            key={slug}
-            magazineSlug={slug}
-            magazineAuthor={frontmatter.author}
-            magazineAuthorLink={frontmatter.author}
-            magazineCover={frontmatter.cover_image}
-            magazineDate={frontmatter.date}
-            magazinePreview={frontmatter.preview}
-            magazineReadTime={frontmatter.read_time}
-            magazineTag={frontmatter.tag}
-            magazineTitle={frontmatter.title}
-          />
-        );
-      })}
+      <Container as={"section"} className="homepage-podcast-grid  pt-px pl-px">
+        {magazinePost.map(({ frontmatter, slug }) => {
+          return (
+            <MagazineSummaryCard
+              key={slug}
+              magazineSlug={slug}
+              magazineAuthor={frontmatter.author}
+              magazineAuthorLink={frontmatter.author}
+              magazineCover={frontmatter.cover_image}
+              magazineDate={frontmatter.date}
+              magazinePreview={frontmatter.preview}
+              magazineReadTime={frontmatter.read_time}
+              magazineTag={frontmatter.tag}
+              magazineTitle={frontmatter.title}
+            />
+          );
+        })}
+      </Container>
     </main>
   );
 };
