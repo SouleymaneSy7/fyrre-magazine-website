@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import Card from "../common/Card";
@@ -8,7 +9,6 @@ import LinkWithArrow from "./LinkWithArrow";
 
 import { homepagePodcastList } from "@/constants";
 import { ArrowRightIcon } from "@/icons/Icons.component";
-import Link from "next/link";
 
 const HomepagePodcastList = () => {
   return (
@@ -32,29 +32,38 @@ const HomepagePodcastList = () => {
         />
       </div>
 
-      <div>
+      <div className="border-collapse">
         {homepagePodcastList.map(
           ({ id, title, coverImage, date, duration }) => {
             return (
-              <Card key={id}>
-                <div>
+              <Card
+                key={id}
+                className="p-6 lg:p-8 border border-primary-clr border-collapse"
+              >
+                <div className="w-full h-auto mb-5 md:mb-6 lg:mb-8">
                   <Image
                     src={coverImage}
                     alt={`${title} - podcast cover image.`}
-                    width={100}
-                    height={100}
+                    width={960}
+                    height={960}
+                    className="w-full h-full aspect-square"
                   />
                 </div>
 
                 <div>
-                  <Title level="h3">{title}</Title>
+                  <Title
+                    level="h3"
+                    className="heading-3 mb-6 md:mb-10 lg:mb-12"
+                  >
+                    {title}
+                  </Title>
 
-                  <div>
+                  <div className="flex gap-2 items-baseline mb-2">
                     <strong>Date</strong>
                     <span>{date}</span>
                   </div>
 
-                  <div>
+                  <div className="flex gap-2 items-baseline">
                     <strong>Duration</strong>
                     <span>{duration}</span>
                   </div>
