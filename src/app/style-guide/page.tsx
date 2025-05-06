@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import Button from "@/components/common/Button";
 import Forms from "@/components/common/Form";
 import Inputs from "@/components/common/Input";
@@ -6,6 +8,12 @@ import Marquee from "@/components/layouts/Marquee";
 import { ArrowRightIcon } from "@/icons/Icons.component";
 
 const list = ["List Element 1", "List Element 2", "List Element 3"];
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Style Guide | Fyrre - Modern Magazine & Digital Content Hub.",
+  };
+}
 
 export default function page() {
   return (
