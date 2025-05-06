@@ -16,6 +16,7 @@
   --color-*: initial;
   --color-default-clr: oklch(1 0 0);
   --color-primary-clr: oklch(0 0 0);
+  --color-muted-bg-clr: #f8f8f8;
   --color-border-default-clr: var(--color-primary-clr);
   --color-border-inversed-clr: oklch(0.17 0 0 / 10%);
   --color-text-default-clr: var(--color-primary-clr);
