@@ -16,12 +16,16 @@ const PodcastContents: React.FC<PodcastContentsPropsType> = ({
   podcastTitle,
 }) => {
   return (
-    <Container as={"div"}>
-      <Title level="h3">Episode {`0${podcastEpisode}`}</Title>
+    <Container as={"div"} className="col-span-2">
+      <Title level="h3" className="heading-5 uppercase mb-4">
+        Episode {`0${podcastEpisode}`}
+      </Title>
 
-      <Title level="h1">{podcastTitle}</Title>
+      <Title level="h1" className="heading-1 uppercase mb-5 md:mb-6 lg:mb-8">
+        {podcastTitle}
+      </Title>
 
-      <div>
+      <div className="mdx-content-container">
         <MDXRemote source={MDXContent} />
       </div>
     </Container>
