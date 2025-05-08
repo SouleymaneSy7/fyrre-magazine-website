@@ -108,6 +108,7 @@ export type AuthorSideBarPropsType = {
   imageSrc: string;
   authorJob: string | undefined;
   authorCity: string | undefined;
+  authorName: string;
   authorSocials: {
     id: string;
     Icon: React.FC<IconPropsType>;
