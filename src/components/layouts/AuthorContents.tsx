@@ -10,10 +10,15 @@ const AuthorContents: React.FC<AuthorContentPropsType> = ({
   MDXContent,
 }) => {
   return (
-    <Container as={"div"}>
-      <Title level="h2">{authorName}</Title>
+    <Container as={"div"} className="col-span-2">
+      <Title
+        level="h2"
+        className="heading-medium uppercase mb-5 md:mb-6 lg:mb-8"
+      >
+        {authorName}
+      </Title>
 
-      <div>
+      <div className="mdx-content-container">
         <MDXRemote source={MDXContent} />
       </div>
     </Container>
