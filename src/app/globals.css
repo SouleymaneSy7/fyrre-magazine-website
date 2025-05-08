@@ -273,3 +273,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 600px), 1fr));
 }
+
+.mdx-content-container > * + * {
+  @apply mt-4 lg:mt-5;
+}
