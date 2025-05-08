@@ -32,6 +32,7 @@
   --text-fs-heading-x-large: clamp(4rem, 1.8667rem + 10.6667vw, 12rem);
   --text-fs-heading-large: clamp(2.5rem, 1.0333rem + 7.3333vw, 8rem);
   --text-fs-heading-medium: clamp(2.5rem, 1.5667rem + 4.6667vw, 6rem);
+  --text-fs-heading-small: clamp(2.5rem, 1.7857rem + 3.5714vw, 5rem);
   --text-fs-heading-1: clamp(2.5rem, 2.1rem + 2vw, 4rem);
   --text-fs-heading-2: clamp(2rem, 1.7333rem + 1.3333vw, 3rem);
   --text-fs-heading-3: clamp(1.5rem, 1.3667rem + 0.6667vw, 2rem);
@@ -51,6 +52,7 @@
   --leading-heading-x-large: 100%;
   --leading-heading-large: 100%;
   --leading-heading-medium: 100%;
+  --leading-heading-small: 5.5rem;
   --leading-heading-1: 4.375rem;
   --leading-heading-2: 3.625rem;
   --leading-heading-3: 130%;
@@ -152,6 +154,10 @@
 
   .heading-medium {
     @apply text-fs-heading-medium font-semi-bold leading-heading-medium;
+  }
+
+  .heading-small {
+    @apply text-fs-heading-small font-semi-bold leading-heading-small;
   }
 
   .heading-1 {
