@@ -49,7 +49,10 @@ const Page = async (props: { params: PagePropsType }) => {
           magazineReadTime={frontmatter.read_time}
         />
 
-        <Container as={"div"}>
+        <Container
+          as={"div"}
+          className="container-medium | flex flex-col-reverse gap-8 md:gap-16 lg:grid lg:grid-rows-1 lg:grid-cols-3"
+        >
           <MagazinePostSidebar
             magazineAuthorImage={frontmatter.author_image}
             magazineAuthorName={frontmatter.author}
