@@ -17,27 +17,34 @@ const PodcastSidebar: React.FC<PodcastSidebarPropsType> = ({
 }) => {
   return (
     <Container as={"aside"}>
-      <div>
+      <div className="w-full h-auto mb-4">
         <Image
           priority
-          width={100}
-          height={100}
+          width={800}
+          height={800}
           src={imageSrc}
           alt={`${podcastTitle} - cover image.`}
+          className="w-full h-full aspect-square"
         />
       </div>
 
-      <div>
-        <Title level="h3">Listen On</Title>
+      <div className="flex items-center justify-between border-b border-primary-clr pb-5 mb-5 md:pb-6 md:mb-6 lg:pb-8 lg:mb-8">
+        <Title level="h3" className="heading-5 uppercase">Listen On</Title>
 
         <List
+          className="flex items-center gap-3"
           items={podcastListenSocials}
           renderItem={(item) => {
             const Icon = item.Icon;
 
             return (
               <li key={item.id}>
-                <a href={item.href} target="_blank" title={item.name}>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={item.name}
+                >
                   <Icon />
                 </a>
               </li>
@@ -46,26 +53,32 @@ const PodcastSidebar: React.FC<PodcastSidebarPropsType> = ({
         />
       </div>
 
-      <div>
-        <p>
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center justify-between">
           <strong>Date</strong> <span>{podcastDate}</span>
-        </p>
+        </div>
 
-        <p>
+        <div className="flex items-center justify-between">
           <strong>Duration</strong> <span>{podcastDuration}</span>
-        </p>
+        </div>
 
-        <div>
+        <div className="flex items-center justify-between">
           <Title level="h3">Share</Title>
 
           <List
+            className="flex items-center gap-3"
             items={podcastShareSocials}
             renderItem={(item) => {
               const Icon = item.Icon;
 
               return (
                 <li key={item.id}>
-                  <a href={item.href} target="_blank" title={item.name}>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={item.name}
+                  >
                     <Icon />
                   </a>
                 </li>
