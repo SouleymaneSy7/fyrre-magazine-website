@@ -10,7 +10,7 @@ const MagazinePostContents: React.FC<MagazinePostContentsPropsType> = ({
   MDXContent,
 }) => {
   return (
-    <Container as={"div"} className="col-span-2">
+    <Container as={"div"} className="mdx-content-container | col-span-2">
       <MDXRemote source={MDXContent} />
     </Container>
   );
