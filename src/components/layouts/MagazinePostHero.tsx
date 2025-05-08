@@ -6,6 +6,7 @@ import Title from "../common/Title";
 import Container from "../common/Container";
 
 import { MagazinePostHeroPropsType } from "@/types";
+import Button from "../common/Button";
 
 const MagazinePostHero: React.FC<MagazinePostHeroPropsType> = ({
   magazineAuthor,
@@ -20,39 +21,51 @@ const MagazinePostHero: React.FC<MagazinePostHeroPropsType> = ({
   const authorLink = magazineAuthorLink?.replace(" ", "-").toLowerCase();
 
   return (
-    <Container as={"div"}>
-      <div>
-        <Title level="h1">{magazineTitle}</Title>
+    <Container as={"div"} className="mb-14 md:mb-20 lg:mb-24">
+      <div className="flex flex-col gap-16 mb-14 md:mb-20 lg:flex-row lg:mb-24">
+        <Title level="h1" className="heading-medium uppercase">
+          {magazineTitle}
+        </Title>
 
-        <p>
-          <strong>{magazinePreview}</strong>
-        </p>
-      </div>
-
-      <div>
-        <div>
-          <Link href={`/authors/${authorLink}`}>
-            <strong>Text</strong> <span>{magazineAuthor}</span>
-          </Link>
-
+        <div className="w-full xl:min-w-[590px] xl:max-w-[730px]">
           <p>
-            <strong>Date</strong> <span>{magazineDate}</span>
-          </p>
-
-          <p>
-            <strong>Read</strong> <span>{magazineReadTime}</span>
+            <strong className="text-large font-medium">
+              {magazinePreview}
+            </strong>
           </p>
         </div>
-
-        <p>{magazineTag}</p>
       </div>
 
-      <div>
+      <div className="flex flex-col items-start gap-4 mb-5 md:flex-row md:justify-between md:items-center md:mb-6 lg:mb-8">
+        <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-6">
+          <div className="flex items-baseline gap-2">
+            <strong>Text</strong>
+            <Link href={`/authors/${authorLink}`} className="text-link">
+              {magazineAuthor}
+            </Link>
+          </div>
+
+          <div className="flex items-baseline gap-2">
+            <strong>Date</strong> <span>{magazineDate}</span>
+          </div>
+
+          <div className="flex items-baseline gap-2">
+            <strong>Read</strong> <span>{magazineReadTime}</span>
+          </div>
+        </div>
+
+        <Button variant="label" size="label">
+          {magazineTag}
+        </Button>
+      </div>
+
+      <div className="w-full h-auto">
         <Image
-          width={100}
-          height={100}
+          width={2500}
+          height={1200}
           src={magazineCover}
           alt={`${magazineTitle} magazine - cover image.`}
+          className="w-full h-full aspect-video"
         />
       </div>
     </Container>
