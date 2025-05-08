@@ -1,7 +1,10 @@
+import Link from "next/link";
 import { Metadata } from "next";
 
+import Title from "@/components/common/Title";
 import Container from "@/components/common/Container";
 import SingleNav from "@/components/layouts/SingleNav";
+import LinkWithArrow from "@/components/layouts/LinkWithArrow";
 import MagazinePostHero from "@/components/layouts/MagazinePostHero";
 import MagazinePostSidebar from "@/components/layouts/MagazinePostSidebar";
 import MagazinePostContents from "@/components/layouts/MagazinePostContents";
@@ -9,6 +12,7 @@ import MagazinePostContents from "@/components/layouts/MagazinePostContents";
 import { PagePropsType } from "@/types";
 import { shareSocials } from "@/constants";
 import { loadArticle } from "@/libs/fileHelpers";
+import { ArrowRightIcon } from "@/icons/Icons.component";
 
 export async function generateMetadata({
   params,
@@ -51,7 +55,7 @@ const Page = async (props: { params: PagePropsType }) => {
 
         <Container
           as={"div"}
-          className="container-medium | flex flex-col-reverse gap-8 md:gap-16 lg:grid lg:grid-rows-1 lg:grid-cols-3"
+          className="container-medium | flex flex-col-reverse gap-8 mb-18 md:gap-16 md:mb-32 lg:grid lg:grid-rows-1 lg:grid-cols-3 lg:mb-48"
         >
           <MagazinePostSidebar
             magazineAuthorImage={frontmatter.author_image}
@@ -63,6 +67,25 @@ const Page = async (props: { params: PagePropsType }) => {
 
           <MagazinePostContents MDXContent={content} />
         </Container>
+
+        <div className="flex items-center justify-between pt-6 md:pt-10 lg:pt-12 border-t border-primary-clr mb-14 md:mb-20 lg:mb-24">
+          <Title level="h2" className="heading-large uppercase">
+            Lastest Posts
+          </Title>
+
+          <Link
+            href={"/magazine"}
+            className="inline-block md:hidden lg:hidden xl:hidden"
+          >
+            <ArrowRightIcon />
+          </Link>
+
+          <LinkWithArrow
+            linkHref={"/magazine"}
+            linkTitle={"See All"}
+            classNames="hidden md:flex"
+          />
+        </div>
       </Container>
     </main>
   );
