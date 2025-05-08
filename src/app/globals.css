@@ -259,6 +259,11 @@
   }
 }
 
+.container-medium {
+  width: min(100%, var(--container-medium));
+  margin-inline: auto;
+}
+
 .homepage-podcast-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
