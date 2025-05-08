@@ -11,7 +11,7 @@ const SingleNav: React.FC<SyngleNavPropsType> = ({ goBackHref, title }) => {
   return (
     <Container
       as={"section"}
-      className="w-full flex items-center justify-between mt-8"
+      className="w-full flex items-center justify-between mt-8 mb-14 lg:mb-24"
     >
       <LinkWithArrow
         linkHref={`/${goBackHref}`}
