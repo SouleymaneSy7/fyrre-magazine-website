@@ -37,13 +37,16 @@ const HomepagePodcastList = () => {
 
       <div className="homepage-podcast-grid pt-px pl-px mb-18 md:mb-32 lg:mb-48">
         {homepagePodcastList.map(
-          ({ id, title, coverImage, date, duration }) => {
+          ({ id, title, coverImage, date, duration, link }) => {
             return (
               <Card
                 key={id}
                 className="p-6 lg:p-8 border border-primary-clr -ml-px -mt-px"
               >
-                <div className="w-full h-auto mb-5 md:mb-6 lg:mb-8">
+                <Link
+                  href={`/podcast/${link}`}
+                  className="inline-block w-full h-auto mb-5 md:mb-6 lg:mb-8"
+                >
                   <Image
                     src={coverImage}
                     alt={`${title} - podcast cover image.`}
@@ -51,16 +54,18 @@ const HomepagePodcastList = () => {
                     height={960}
                     className="w-full h-full aspect-square"
                   />
-                </div>
+                </Link>
 
                 <div>
-                  <Title
-                    level="h3"
-                    className="heading-3 mb-6 md:mb-10 lg:mb-12"
-                    id="card-title"
-                  >
-                    {title}
-                  </Title>
+                  <Link href={`/podcast/${link}`}>
+                    <Title
+                      level="h3"
+                      className="heading-3 mb-6 md:mb-10 lg:mb-12"
+                      id="card-title"
+                    >
+                      {title}
+                    </Title>
+                  </Link>
 
                   <div className="flex gap-2 items-baseline mb-2">
                     <strong>Date</strong>
