@@ -8,6 +8,7 @@ import LinkWithArrow from "./LinkWithArrow";
 import { homepageAuthorsList } from "@/constants";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/icons/Icons.component";
+import VisuallyHidden from "../common/VisuallyHidden";
 
 const HomepageAuthorList = () => {
   return (
@@ -22,6 +23,8 @@ const HomepageAuthorList = () => {
           className="inline-block md:hidden lg:hidden xl:hidden"
         >
           <ArrowRightIcon />
+
+          <VisuallyHidden>Go to authors page</VisuallyHidden>
         </Link>
 
         <LinkWithArrow
@@ -54,7 +57,11 @@ const HomepageAuthorList = () => {
 
                 <div>
                   <Link href={`/authors/${authorHref}`}>
-                    <Title level="h3" className="heading-3 mb-4">
+                    <Title
+                      level="h3"
+                      className="heading-3 mb-4"
+                      id="card-title"
+                    >
                       {name}
                     </Title>
                   </Link>

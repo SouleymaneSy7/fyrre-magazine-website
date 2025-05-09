@@ -17,7 +17,10 @@ const HomepageMagazineList = () => {
             key={item.id}
             className="flex flex-col gap-4 mb-8 pb-8 border-b border-b-primary-clr nth-last-[1]:border-b-0 nth-last-[1]:pb-0 nth-last-[1]:mb-0 md:flex-row md:gap-6 lg:mb-12 lg:pb-12 lg:gap-8"
           >
-            <Link href={item.postLink} className="w-full max-w-[240px] h-full block">
+            <Link
+              href={item.postLink}
+              className="w-full max-w-[240px] h-full block"
+            >
               <Image
                 width={500}
                 height={500}
@@ -29,7 +32,7 @@ const HomepageMagazineList = () => {
 
             <div className="lg:flex lg:flex-col lg:justify-between">
               <div>
-                <Title level="h2" className="heading-3 mb-4">
+                <Title level="h2" className="heading-3 mb-4" id="card-title">
                   {item.title}
                 </Title>
                 <p>{item.preview}</p>

@@ -9,6 +9,7 @@ import LinkWithArrow from "./LinkWithArrow";
 
 import { homepagePodcastList } from "@/constants";
 import { ArrowRightIcon } from "@/icons/Icons.component";
+import VisuallyHidden from "../common/VisuallyHidden";
 
 const HomepagePodcastList = () => {
   return (
@@ -23,6 +24,8 @@ const HomepagePodcastList = () => {
           className="inline-block md:hidden lg:hidden xl:hidden"
         >
           <ArrowRightIcon />
+
+          <VisuallyHidden>Go to podcast page</VisuallyHidden>
         </Link>
 
         <LinkWithArrow
@@ -54,6 +57,7 @@ const HomepagePodcastList = () => {
                   <Title
                     level="h3"
                     className="heading-3 mb-6 md:mb-10 lg:mb-12"
+                    id="card-title"
                   >
                     {title}
                   </Title>

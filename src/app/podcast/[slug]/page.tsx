@@ -14,6 +14,7 @@ import SingleNav from "@/components/layouts/SingleNav";
 import LinkWithArrow from "@/components/layouts/LinkWithArrow";
 import PodcastSidebar from "@/components/layouts/PodcastSidebar";
 import PodcastContents from "@/components/layouts/PodcastContents";
+import VisuallyHidden from "@/components/common/VisuallyHidden";
 
 export async function generateMetadata({
   params,
@@ -73,6 +74,8 @@ const Page = async (props: { params: PagePropsType }) => {
             className="inline-block md:hidden lg:hidden xl:hidden"
           >
             <ArrowRightIcon />
+
+            <VisuallyHidden>Go to podcast latest episode page</VisuallyHidden>
           </Link>
 
           <LinkWithArrow
