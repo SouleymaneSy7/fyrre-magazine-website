@@ -39,7 +39,7 @@ const PodcastSummaryCard: React.FC<PodcastSummaryCardPropsType> = ({
 
       <div className="grow flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-12 lg:justify-between">
         <Link href={`/podcast/${podcastSlug}`} className="w-full max-w-[350px]">
-          <Title level="h2" className="heading-3">
+          <Title level="h2" className="heading-3" id="card-title">
             {podcastTitle}
           </Title>
         </Link>

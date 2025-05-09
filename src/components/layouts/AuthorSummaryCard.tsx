@@ -33,7 +33,7 @@ const AuthorSummaryCard: React.FC<AuthorSummaryCardPropsType> = ({
 
       <div className="grow lg:flex lg:gap-12 lg:items-center">
         <Link href={`/authors/${authorSlug}`} className="grow">
-          <Title level="h2" className="heading-3">
+          <Title level="h2" className="heading-3" id="card-title">
             {authorName}
           </Title>
         </Link>

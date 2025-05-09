@@ -88,7 +88,7 @@ const Page = async (props: { params: PagePropsType }) => {
 
                   <div>
                     <Link href={`/magazine/${link}`}>
-                      <Title level="h3" className="heading-3 mb-4">
+                      <Title level="h3" className="heading-3 mb-4" id="card-title">
                         {title}
                       </Title>
                     </Link>

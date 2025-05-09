@@ -12,7 +12,11 @@ const Title: React.FC<TitlePropsType> = ({
     return React.createElement(level, delegatedProps, children);
   };
 
-  return <Heading {...delegatedProps}>{children}</Heading>;
+  return (
+    <Heading {...delegatedProps} role="heading">
+      {children}
+    </Heading>
+  );
 };
 
 export default Title;

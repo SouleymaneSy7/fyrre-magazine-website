@@ -14,6 +14,7 @@ import { shareSocials } from "@/constants";
 import { loadArticle } from "@/libs/fileHelpers";
 import { ArrowRightIcon } from "@/icons/Icons.component";
 import MagazineLatestArticles from "@/components/layouts/MagazineLatestArticles";
+import VisuallyHidden from "@/components/common/VisuallyHidden";
 
 export async function generateMetadata({
   params,
@@ -81,6 +82,7 @@ const Page = async (props: { params: PagePropsType }) => {
             className="inline-block md:hidden lg:hidden xl:hidden"
           >
             <ArrowRightIcon />
+            <VisuallyHidden>Go to magazine latest post page</VisuallyHidden>
           </Link>
 
           <LinkWithArrow

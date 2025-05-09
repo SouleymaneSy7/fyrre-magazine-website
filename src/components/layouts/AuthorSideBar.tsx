@@ -40,7 +40,7 @@ const AuthorSideBar: React.FC<AuthorSideBarPropsType> = ({
             const Icon = item.Icon;
 
             return (
-              <li key={item.id}>
+              <li key={item.id} role="listitem">
                 <a
                   target="_blank"
                   href={item.href}

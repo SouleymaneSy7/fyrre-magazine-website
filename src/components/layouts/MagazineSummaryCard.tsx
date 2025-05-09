@@ -50,7 +50,7 @@ const MagazineSummaryCard: React.FC<MagazineSummaryCardPropsType> = ({
             href={`/magazine/${magazineSlug}`}
             className="inline-block mb-4"
           >
-            <Title level="h2" className="heading-3">
+            <Title level="h2" className="heading-3" id="card-title">
               {magazineTitle}
             </Title>
           </Link>

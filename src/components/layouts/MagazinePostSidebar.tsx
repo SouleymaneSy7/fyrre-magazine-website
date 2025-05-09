@@ -7,6 +7,7 @@ import Title from "../common/Title";
 import Container from "../common/Container";
 
 import { MagazinePostSidebarPropsType } from "@/types";
+import VisuallyHidden from "../common/VisuallyHidden";
 
 const MagazinePostSidebar: React.FC<MagazinePostSidebarPropsType> = ({
   magazineAuthorImage,
@@ -65,14 +66,16 @@ const MagazinePostSidebar: React.FC<MagazinePostSidebarPropsType> = ({
               const Icon = item.Icon;
 
               return (
-                <li key={item.id}>
+                <li key={item.id} role="listitem">
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title={item.name}
+                    title={`follow us on ${item.name}`}
+                    aria-label={`follow us on ${item.name}`}
                   >
                     <Icon />
+                    <VisuallyHidden>Follow us on {item.name}</VisuallyHidden>
                   </a>
                 </li>
               );

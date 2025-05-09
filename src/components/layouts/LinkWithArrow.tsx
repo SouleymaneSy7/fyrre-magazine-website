@@ -1,9 +1,9 @@
 import * as React from "react";
 import Link from "next/link";
+import clsx from "clsx";
 
 import { ArrowRightIcon } from "@/icons/Icons.component";
 import { LinkWithArrowPropsType } from "@/types";
-import clsx from "clsx";
 
 const LinkWithArrow: React.FC<LinkWithArrowPropsType> = ({
   Icon = ArrowRightIcon,

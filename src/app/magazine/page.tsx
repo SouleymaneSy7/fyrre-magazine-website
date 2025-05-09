@@ -38,7 +38,7 @@ const Page = async () => {
           items={magazineCategories}
           renderItem={(item) => {
             return (
-              <li key={item.id}>
+              <li key={item.id} role="listitem">
                 <Button variant="label" size="label">
                   {item.tag}
                 </Button>
