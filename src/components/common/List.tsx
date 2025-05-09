@@ -10,7 +10,11 @@ function List<Item, As extends React.ElementType>({
   Omit<React.ComponentPropsWithoutRef<As>, keyof ListPropsType<Item, As>>) {
   const Component = as ?? "ul";
 
-  return <Component {...delegatedProps}>{items.map(renderItem)}</Component>;
+  return (
+    <Component {...delegatedProps} role="list">
+      {items.map(renderItem)}
+    </Component>
+  );
 }
 
 export default List;

@@ -6,6 +6,7 @@ import { AuthorSideBarPropsType } from "@/types";
 import List from "../common/List";
 import Title from "../common/Title";
 import Container from "../common/Container";
+import VisuallyHidden from "../common/VisuallyHidden";
 
 const AuthorSideBar: React.FC<AuthorSideBarPropsType> = ({
   imageSrc,
@@ -40,8 +41,15 @@ const AuthorSideBar: React.FC<AuthorSideBarPropsType> = ({
 
             return (
               <li key={item.id}>
-                <a href={item.href} target="_blank" rel="noopener noreferrer">
+                <a
+                  target="_blank"
+                  href={item.href}
+                  rel="noopener noreferrer"
+                  title={`follow us on ${item.title}`}
+                  aria-label={`follow us on ${item.title}`}
+                >
                   <Icon />
+                  <VisuallyHidden>follow us on {item.title}</VisuallyHidden>
                 </a>
               </li>
             );

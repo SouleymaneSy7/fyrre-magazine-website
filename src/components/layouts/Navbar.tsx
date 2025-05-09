@@ -23,6 +23,7 @@ const Navbar = () => {
       <nav
         className="border-border-default-clr relative z-50 pb-5 border-b lg:pb-6"
         role="navigation"
+        aria-label="Main navigation"
       >
         <Container
           as="div"
@@ -30,16 +31,18 @@ const Navbar = () => {
         >
           <Link href={"/"}>
             <LogoIcon />
-            <VisuallyHidden>Fyrre magazine logo</VisuallyHidden>
+            <VisuallyHidden>Fyrre Magazine - Home page</VisuallyHidden>
           </Link>
 
           <HamburgerMenu isOpen={isOpen} onClick={handleIsOpen} />
         </Container>
 
         <NavbarDesktop />
+
+        <VisuallyHidden>Main navigation</VisuallyHidden>
       </nav>
 
-      <NavbarMobile isOpen={isOpen} />
+      <NavbarMobile isOpen={isOpen} handleClick={handleIsOpen} />
     </React.Fragment>
   );
 };

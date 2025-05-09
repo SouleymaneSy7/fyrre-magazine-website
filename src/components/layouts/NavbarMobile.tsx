@@ -12,7 +12,10 @@ import useOnDisabledBodyScroll from "@/hooks/useOnDisabledBodyScroll";
 import { NavbarMobilePropsType } from "@/types";
 import { navbarMobileList } from "@/constants";
 
-const NavbarMobile: React.FC<NavbarMobilePropsType> = ({ isOpen }) => {
+const NavbarMobile: React.FC<NavbarMobilePropsType> = ({
+  isOpen,
+  handleClick,
+}) => {
   useOnDisabledBodyScroll(isOpen);
 
   return (
@@ -33,10 +36,12 @@ const NavbarMobile: React.FC<NavbarMobilePropsType> = ({ isOpen }) => {
                   key={item.id}
                   id="mobile-navigation-link"
                   className="border-b border-primary-clr"
+                  role="listitem"
                 >
                   <Link
                     href={item.href}
                     className="flex items-center justify-between py-3"
+                    onClick={handleClick}
                   >
                     <span className="uppercase font-medium">{item.title}</span>
                     <ArrowRightIcon />

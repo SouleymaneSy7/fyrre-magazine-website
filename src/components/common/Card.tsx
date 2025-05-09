@@ -10,7 +10,12 @@ const Card: React.FC<CardPropsType> = ({
   ...delegatedProps
 }) => {
   return (
-    <Container as={"article"} className={clsx(classNames)} {...delegatedProps}>
+    <Container
+      as={"article"}
+      className={clsx(classNames)}
+      {...delegatedProps}
+      aria-labelledby="card-title"
+    >
       {children}
     </Container>
   );

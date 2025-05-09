@@ -21,7 +21,8 @@ import VisuallyHidden from "../common/VisuallyHidden";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary-clr mt-18 lg:mt-32">
+    <footer role="contentinfo" className="bg-primary-clr mt-18 lg:mt-32">
+      <VisuallyHidden>Footer section of the website</VisuallyHidden>
       <Marquee marqueeText={FooterMarquee} />
       <section className="container | text-text-inversed-clr py-x-huge space-y-x-huge lg:space-y-24 lg:pt-32">
         <div className="flex flex-col gap-x-large lg:flex-row lg:items-center lg:justify-between mb-32">
@@ -50,7 +51,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-x-large lg:flex-row lg:items-start lg:justify-between">
           <Link href={"/"}>
             <LogoIcon fill="#fff" />
-            <VisuallyHidden>Fyrre magazine logo</VisuallyHidden>
+            <VisuallyHidden>Fyrre Magazine - Home page</VisuallyHidden>
           </Link>
           <hr className="lg:hidden bg-text-muted-clr" />
 
@@ -60,8 +61,10 @@ const Footer: React.FC = () => {
               items={FooterLinkList1}
               renderItem={(item) => {
                 return (
-                  <li key={item.id} className="py-2">
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id} className="py-2" role="listitem">
+                    <Link href={item.href} title={item.title} aria-label="link">
+                      {item.title}
+                    </Link>
                   </li>
                 );
               }}
@@ -75,8 +78,10 @@ const Footer: React.FC = () => {
               items={FooterLinkList2}
               renderItem={(item) => {
                 return (
-                  <li key={item.id} className="py-2">
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id} className="py-2" role="listitem">
+                    <Link href={item.href} title={item.title} aria-label="link">
+                      {item.title}
+                    </Link>
                   </li>
                 );
               }}
@@ -90,8 +95,10 @@ const Footer: React.FC = () => {
               items={FooterLinkList3}
               renderItem={(item) => {
                 return (
-                  <li key={item.id} className="py-2">
-                    <Link href={item.href}>{item.title}</Link>
+                  <li key={item.id} className="py-2" role="listitem">
+                    <Link href={item.href} title={item.title} aria-label="link">
+                      {item.title}
+                    </Link>
                   </li>
                 );
               }}
@@ -104,7 +111,7 @@ const Footer: React.FC = () => {
             <p>
               © Design by{" "}
               <a
-                href="https://gola.io"
+                href="https://template.gola.io"
                 className="text-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -134,13 +141,16 @@ const Footer: React.FC = () => {
                 const Icon = item.Icon;
 
                 return (
-                  <li key={item.id}>
+                  <li key={item.id} role="listitem">
                     <a
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`follow us on ${item.title}`}
+                      title={`follow us on ${item.title}`}
                     >
                       <Icon width={24} height={24} fill="#fff" />
+                      <VisuallyHidden>follow us on {item.title}</VisuallyHidden>
                     </a>
                   </li>
                 );

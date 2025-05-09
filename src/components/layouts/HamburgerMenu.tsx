@@ -26,25 +26,29 @@ const HamburgerMenu: React.FC<HamburgerMenuPropsType> = ({
       )}
     >
       <span
+        aria-hidden="true"
         className={clsx(
           "w-8 h-1 bg-current rounded-2xl transition-all duration-500 ease-in-out",
           isOpen && "translate-y-[10px] rotate-45"
         )}
       />
       <span
+        aria-hidden="true"
         className={clsx(
           "w-8 h-1 bg-current rounded-2xl transition-all duration-500 ease-in-out",
           isOpen && "opacity-0"
         )}
       />
       <span
+        aria-hidden="true"
         className={clsx(
           "w-8 h-1 bg-current rounded-2xl transition-all duration-500 ease-in-out",
           isOpen && "-translate-y-[10px] -rotate-45"
         )}
       />
-
-      <VisuallyHidden>Open & Close the mobile navigation</VisuallyHidden>
+      <VisuallyHidden>
+        {isOpen ? "Close the navigation menu." : "Open the navigation menu."}
+      </VisuallyHidden>
     </button>
   );
 };
