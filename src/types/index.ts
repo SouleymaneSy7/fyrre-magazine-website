@@ -74,6 +74,14 @@ export type FrontmatterType = {
   read_time?: string;
   tag?: string;
   preview?: string;
+  articles?: Array<{
+    id: number;
+    title: string;
+    link: string;
+    read_time: string;
+    cover_image: string;
+    date: string;
+  }>;
 };
 
 export type ArticleDataType = {
