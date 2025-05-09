@@ -286,10 +286,15 @@ const FooterLinkList3 = [
 ];
 
 const socialIcons = [
-  { id: 0, Icon: InstagramIcon, href: "https://instagram.com" },
-  { id: 1, Icon: TwitterIcon, href: "https://twitter.com" },
-  { id: 2, Icon: YoutubeIcon, href: "https://youtube.com" },
-  { id: 3, Icon: RSSIcon, href: "https://rss.com" },
+  {
+    id: 0,
+    title: "Instagram",
+    Icon: InstagramIcon,
+    href: "https://instagram.com",
+  },
+  { id: 1, title: "Twitter", Icon: TwitterIcon, href: "https://twitter.com" },
+  { id: 2, title: "Youtube", Icon: YoutubeIcon, href: "https://youtube.com" },
+  { id: 3, title: "RSS", Icon: RSSIcon, href: "https://rss.com" },
 ];
 
 const listenSocials = [
