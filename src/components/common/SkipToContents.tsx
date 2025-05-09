@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import clsx from "clsx";
+import VisuallyHidden from "./VisuallyHidden";
 
 const SkipToContent = () => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -26,7 +27,7 @@ const SkipToContent = () => {
   };
 
   React.useLayoutEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const skipLink = document.getElementById("skip-to-content-link");
       if (skipLink) {
         document.body.insertAdjacentElement("afterbegin", skipLink);
@@ -46,6 +47,7 @@ const SkipToContent = () => {
       onKeyDown={handleKeyDown}
     >
       Go to main content.
+      <VisuallyHidden>Go to main content.</VisuallyHidden>
     </a>
   );
 };
