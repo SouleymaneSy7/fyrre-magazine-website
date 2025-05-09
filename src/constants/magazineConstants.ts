@@ -24,6 +24,7 @@ const magazineLatestPost = [
     readTime: "10 mn",
     tag: "art",
     coverImage: "/assets/images/magazine-cover-1.webp",
+    slug: "hope-dies-last",
   },
   {
     id: crypto.randomUUID(),
@@ -35,6 +36,7 @@ const magazineLatestPost = [
     readTime: "10 mn",
     tag: "sculptures",
     coverImage: "/assets/images/magazine-cover-3.webp",
+    slug: "the-best-art-museums",
   },
   {
     id: crypto.randomUUID(),
@@ -46,6 +48,7 @@ const magazineLatestPost = [
     readTime: "35 Min",
     tag: "art",
     coverImage: "/assets/images/magazine-cover-4.webp",
+    slug: "the-devil-is-in-the-details",
   },
 ];
 
