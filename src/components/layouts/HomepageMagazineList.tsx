@@ -32,9 +32,11 @@ const HomepageMagazineList = () => {
 
             <div className="lg:flex lg:flex-col lg:justify-between">
               <div>
-                <Title level="h2" className="heading-3 mb-4" id="card-title">
-                  {item.title}
-                </Title>
+                <Link href={item.postLink}>
+                  <Title level="h2" className="heading-3 mb-4" id="card-title">
+                    {item.title}
+                  </Title>
+                </Link>
                 <p>{item.preview}</p>
               </div>
 
