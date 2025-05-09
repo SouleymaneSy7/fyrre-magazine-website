@@ -2,6 +2,10 @@
 
 ![Website Preview](./public/preview/preview.png)
 
+## Demo
+
+[Live Site](https://fyrre-magazine-webstite.netlify.app)
+
 ## Overview
 
 Fyrre Magazine is a cutting-edge digital magazine platform meticulously crafted using Next.js 15. This dynamic publishing solution combines sophisticated design with powerful functionality to deliver an exceptional reading experience. The platform features a seamless content delivery system, enhanced by server-side rendering capabilities and optimized data fetching. With its modern architecture, Fyrre Magazine offers lightning-fast page transitions, responsive layouts, and an intuitive user interface that adapts beautifully across all devices. The platform prioritizes both performance and user engagement, incorporating advanced features like real-time content updates and seamless social media integration, making it an ideal choice for contemporary digital publishing needs.
@@ -89,6 +93,16 @@ fyrre-magazine-website/
 │   ├── icons/         # SVG icon components
 │   └── types/         # TypeScript types
 ```
+
+## Performance
+
+- Lighthouse Score:
+  - Performance: 97/100
+  - Accessibility: 100/100
+  - Best Practices: 100/100
+  - SEO: 100/100
+
+![Lighthouse Preview](./public/preview/lighthouse-preview.png)
 
 ## Configuration
 
