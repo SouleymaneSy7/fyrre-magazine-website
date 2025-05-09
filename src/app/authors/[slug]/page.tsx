@@ -1,15 +1,18 @@
-import * as React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 
+import { PagePropsType } from "@/types";
 import { loadArticle } from "@/libs/fileHelpers";
 import { followSocials } from "@/constants/authorsConstants";
 
+import Card from "@/components/common/Card";
+import Title from "@/components/common/Title";
 import Container from "@/components/common/Container";
 import SingleNav from "@/components/layouts/SingleNav";
 import AuthorSideBar from "@/components/layouts/AuthorSideBar";
+import DateFormatter from "@/components/layouts/DateFormatter";
 import AuthorContents from "@/components/layouts/AuthorContents";
-import { PagePropsType } from "@/types";
-import Title from "@/components/common/Title";
 
 export async function generateMetadata({
   params,
@@ -33,6 +36,8 @@ const Page = async (props: { params: PagePropsType }) => {
   const params = await props.params;
 
   const { frontmatter, content } = await loadArticle("authors", params.slug);
+
+  console.log("frontmatter", frontmatter);
 
   return (
     <main id="main-content" className="container">
@@ -58,6 +63,54 @@ const Page = async (props: { params: PagePropsType }) => {
           <Title level="h2" className="heading-small">
             Articles by {frontmatter.name}
           </Title>
+        </div>
+
+        <div className="home-authors-grid | pt-px pl-px">
+          {frontmatter.articles?.map(
+            ({ id, cover_image, date, link, read_time, title }) => {
+              return (
+                <Card
+                  key={id}
+                  className="flex gap-8 flex-wrap items-center p-8 border border-primary-clr -ml-px -mt-px mg:gap-12"
+                >
+                  <Link
+                    href={`/magazine/${link}`}
+                    className="inline-block w-[150px] h-[150px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
+                  >
+                    <Image
+                      src={cover_image}
+                      alt={`${title} - cover image.`}
+                      width={500}
+                      height={500}
+                      className="w-full h-full aspect-square object-cover"
+                    />
+                  </Link>
+
+                  <div>
+                    <Link href={`/magazine/${link}`}>
+                      <Title level="h3" className="heading-3 mb-4">
+                        {title}
+                      </Title>
+                    </Link>
+
+                    <div className="flex flex-col gap-4 md:flex-row md:items-baseline ">
+                      <div className="flex items-baseline gap-2">
+                        <strong>Date</strong>
+                        <span>
+                          <DateFormatter dateString={date} />
+                        </span>
+                      </div>
+
+                      <div className="flex items-baseline gap-2">
+                        <strong>Read</strong>
+                        <span>{read_time}</span>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              );
+            }
+          )}
         </div>
       </Container>
     </main>
