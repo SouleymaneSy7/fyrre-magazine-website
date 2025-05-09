@@ -10,6 +10,8 @@
 
 Fyrre Magazine is a cutting-edge digital magazine platform meticulously crafted using Next.js 15. This dynamic publishing solution combines sophisticated design with powerful functionality to deliver an exceptional reading experience. The platform features a seamless content delivery system, enhanced by server-side rendering capabilities and optimized data fetching. With its modern architecture, Fyrre Magazine offers lightning-fast page transitions, responsive layouts, and an intuitive user interface that adapts beautifully across all devices. The platform prioritizes both performance and user engagement, incorporating advanced features like real-time content updates and seamless social media integration, making it an ideal choice for contemporary digital publishing needs.
 
+The stunning visual design was crafted by [Pawel Gola](https://dribbble.com/pawelgola), bringing the magazine's aesthetic vision to life through elegant typography, thoughtful layouts, and cohesive visual elements that enhance the overall user experience.
+
 ## Features
 
 - **Modern and Responsive Design**
