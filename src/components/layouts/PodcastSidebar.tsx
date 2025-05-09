@@ -46,11 +46,11 @@ const PodcastSidebar: React.FC<PodcastSidebarPropsType> = ({
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title={`follow us on ${item.name}`}
-                  aria-label={`follow us on ${item.name}`}
+                  title={`Listen to us on ${item.name}`}
+                  aria-label={`Listen to us on ${item.name}`}
                 >
                   <Icon />
-                  <VisuallyHidden>Follow us on {item.name}</VisuallyHidden>
+                  <VisuallyHidden>Listen to us on {item.name}</VisuallyHidden>
                 </a>
               </li>
             );
