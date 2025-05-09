@@ -8,11 +8,21 @@ const MagazineLatestArticles = () => {
   return (
     <Container as={"div"} className="homepage-podcast-grid pt-px pl-px">
       {magazineLatestPost.map(
-        ({ id, author, coverImage, date, preview, readTime, tag, title }) => {
+        ({
+          id,
+          author,
+          coverImage,
+          date,
+          preview,
+          readTime,
+          tag,
+          title,
+          slug,
+        }) => {
           return (
             <MagazineSummaryCard
               key={id}
-              magazineSlug={""}
+              magazineSlug={slug}
               magazineDate={date}
               magazineTag={tag}
               magazineCover={coverImage}
