@@ -41,6 +41,7 @@ export type MarqueePropsType = {
 
 export type NavbarMobilePropsType = {
   isOpen: boolean;
+  handleClick: () => void;
 };
 
 export type HamburgerMenuPropsType = {
@@ -120,6 +121,7 @@ export type AuthorSideBarPropsType = {
   authorSocials: {
     id: string;
     Icon: React.FC<IconPropsType>;
+    title: string;
     href: string;
   }[];
 };
