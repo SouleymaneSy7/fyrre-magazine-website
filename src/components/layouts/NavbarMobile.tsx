@@ -6,17 +6,20 @@ import FocusLock from "react-focus-lock";
 
 import List from "../common/List";
 import Container from "../common/Container";
+import useOnDisabledBodyScroll from "@/hooks/useOnDisabledBodyScroll";
 
 import { ArrowRightIcon } from "@/icons/Icons.component";
-import useOnDisabledBodyScroll from "@/hooks/useOnDisabledBodyScroll";
 import { NavbarMobilePropsType } from "@/types";
 import { navbarMobileList } from "@/constants";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const NavbarMobile: React.FC<NavbarMobilePropsType> = ({
   isOpen,
   handleClick,
 }) => {
-  useOnDisabledBodyScroll(isOpen);
+  const isMobile = useMediaQuery("(max-width: 1024px)");
+
+  isMobile ? useOnDisabledBodyScroll(isOpen) : useOnDisabledBodyScroll(false);
 
   return (
     <React.Fragment>
