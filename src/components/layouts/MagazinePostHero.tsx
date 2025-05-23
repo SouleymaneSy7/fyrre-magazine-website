@@ -7,6 +7,7 @@ import Container from "../common/Container";
 
 import { MagazinePostHeroPropsType } from "@/types";
 import Button from "../common/Button";
+import DateFormatter from "./DateFormatter";
 
 const MagazinePostHero: React.FC<MagazinePostHeroPropsType> = ({
   magazineAuthor,
@@ -46,7 +47,7 @@ const MagazinePostHero: React.FC<MagazinePostHeroPropsType> = ({
           </div>
 
           <div className="flex items-baseline gap-2">
-            <strong>Date</strong> <span>{magazineDate}</span>
+            <strong>Date</strong> <DateFormatter dateString={magazineDate} />
           </div>
 
           <div className="flex items-baseline gap-2">
