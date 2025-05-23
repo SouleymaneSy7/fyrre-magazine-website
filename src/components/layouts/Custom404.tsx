@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "../common/Button";
+import { ArrowRightIcon } from "@/icons/Icons.component";
 
 const Custom404 = () => {
   return (
@@ -17,8 +18,16 @@ const Custom404 = () => {
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button variant="default" size="lg" asChild>
-              <Link href={"/"}>Go back home</Link>
+            <Button
+              variant="default"
+              size="lg"
+              asChild
+              className="flex gap-4 items-center font-medium"
+            >
+              <Link href={"/"}>
+                <ArrowRightIcon fill="#fff" className="-rotate-180" /> Go back
+                home
+              </Link>
             </Button>
           </div>
         </div>
