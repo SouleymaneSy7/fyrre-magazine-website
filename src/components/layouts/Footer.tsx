@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
             <p>
               © Design by{" "}
               <a
-                href="https://template.gola.io"
+                href="https://dribbble.com/pawelgola"
                 className="text-link"
                 target="_blank"
                 rel="noopener noreferrer"
