@@ -7,6 +7,7 @@ import Title from "../common/Title";
 
 import { MagazineSummaryCardPropsType } from "@/types";
 import Button from "../common/Button";
+import DateFormatter from "./DateFormatter";
 
 const MagazineSummaryCard: React.FC<MagazineSummaryCardPropsType> = ({
   magazineAuthor,
@@ -25,7 +26,7 @@ const MagazineSummaryCard: React.FC<MagazineSummaryCardPropsType> = ({
     <Card className="flex flex-col justify-between p-6 md:p-8 lg:p-12 border border-primary-clr -ml-px -mt-px">
       <div>
         <div className="flex items-center justify-between mb-5 md:mb-6 lg:mb-8">
-          <p>{magazineDate}</p>
+          <DateFormatter dateString={magazineDate} />
 
           <Button variant="label" size="label">
             {magazineTag}
