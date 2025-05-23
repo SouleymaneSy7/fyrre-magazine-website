@@ -67,7 +67,7 @@ export type FrontmatterType = {
   image: string;
   cover_image: string;
   author_image: string;
-  date?: string;
+  date: string;
   job?: string;
   city?: string;
   author?: string;
@@ -137,7 +137,7 @@ export type PodcastSummaryCardPropsType = {
   podcastEpisode: number;
   podcastCover: string;
   podcastTitle: string | undefined;
-  podcastDate: string | undefined;
+  podcastDate: string;
   podcastDuration: string | undefined;
   podcastSlug: string;
 };
@@ -145,7 +145,7 @@ export type PodcastSummaryCardPropsType = {
 export type PodcastSidebarPropsType = {
   imageSrc: string;
   podcastTitle: string;
-  podcastDate: string | undefined;
+  podcastDate: string;
   podcastDuration: string | undefined;
   podcastListenSocials: {
     id: string;
@@ -162,7 +162,7 @@ export type PodcastSidebarPropsType = {
 };
 
 export type MagazineType = {
-  magazineDate: string | undefined;
+  magazineDate: string;
   magazineTag: string | undefined;
   magazineCover: string;
   magazineTitle: string;
@@ -181,7 +181,7 @@ export type MagazinePostHeroPropsType = MagazineType;
 export type MagazinePostSidebarPropsType = {
   magazineAuthorName: string | undefined;
   magazineAuthorImage: string;
-  magazineDate: string | undefined;
+  magazineDate: string;
   magazineReadTime: string | undefined;
   magazineSocials: {
     id: string;
