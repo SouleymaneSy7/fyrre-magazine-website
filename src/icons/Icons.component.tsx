@@ -21,9 +21,10 @@ export const AppleIcon: React.FC<IconPropsType> = ({
   );
 };
 
-export const ArrowRightIcon = (
-  delegatedProps: React.SVGProps<SVGSVGElement>
-) => {
+export const ArrowRightIcon: React.FC<IconPropsType> = ({
+  fill = "#000",
+  ...delegatedProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +34,7 @@ export const ArrowRightIcon = (
       {...delegatedProps}
     >
       <path
-        fill="#000"
+        fill={fill}
         d="M12.172 7 6.808 1.636 8.222.222 16 8l-7.778 7.778-1.414-1.414L12.172 9H0V7h12.172Z"
       />
     </svg>
