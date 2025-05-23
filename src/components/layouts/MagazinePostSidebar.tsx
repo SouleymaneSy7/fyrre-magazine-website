@@ -8,6 +8,7 @@ import Container from "../common/Container";
 
 import { MagazinePostSidebarPropsType } from "@/types";
 import VisuallyHidden from "../common/VisuallyHidden";
+import DateFormatter from "./DateFormatter";
 
 const MagazinePostSidebar: React.FC<MagazinePostSidebarPropsType> = ({
   magazineAuthorImage,
@@ -46,7 +47,7 @@ const MagazinePostSidebar: React.FC<MagazinePostSidebarPropsType> = ({
       <div className="w-full flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <strong>Date</strong>
-          <span>{magazineDate}</span>
+          <DateFormatter dateString={magazineDate} />
         </div>
 
         <div className="flex items-center justify-between">
