@@ -7,6 +7,7 @@ import Title from "../common/Title";
 
 import { PodcastSummaryCardPropsType } from "@/types";
 import LinkWithArrow from "./LinkWithArrow";
+import DateFormatter from "./DateFormatter";
 
 const PodcastSummaryCard: React.FC<PodcastSummaryCardPropsType> = ({
   podcastEpisode,
@@ -46,7 +47,7 @@ const PodcastSummaryCard: React.FC<PodcastSummaryCardPropsType> = ({
 
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-6 lg:items-center">
           <p>
-            <strong>Date</strong> <span>{podcastDate}</span>
+            <strong>Date</strong> <DateFormatter dateString={podcastDate} />
           </p>
 
           <p>
