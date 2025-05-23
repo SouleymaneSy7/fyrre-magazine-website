@@ -7,6 +7,7 @@ import Container from "../common/Container";
 
 import { PodcastSidebarPropsType } from "@/types";
 import VisuallyHidden from "../common/VisuallyHidden";
+import DateFormatter from "./DateFormatter";
 
 const PodcastSidebar: React.FC<PodcastSidebarPropsType> = ({
   imageSrc,
@@ -60,7 +61,7 @@ const PodcastSidebar: React.FC<PodcastSidebarPropsType> = ({
 
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
-          <strong>Date</strong> <span>{podcastDate}</span>
+          <strong>Date</strong> <DateFormatter dateString={podcastDate} />
         </div>
 
         <div className="flex items-center justify-between">
