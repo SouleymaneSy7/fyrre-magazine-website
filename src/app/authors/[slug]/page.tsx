@@ -37,8 +37,6 @@ const Page = async (props: { params: PagePropsType }) => {
 
   const { frontmatter, content } = await loadArticle("authors", params.slug);
 
-  console.log("frontmatter", frontmatter);
-
   return (
     <main id="main-content" className="container">
       <SingleNav goBackHref="authors" title="authors" />
@@ -88,7 +86,11 @@ const Page = async (props: { params: PagePropsType }) => {
 
                   <div>
                     <Link href={`/magazine/${link}`}>
-                      <Title level="h3" className="heading-3 mb-4" id="card-title">
+                      <Title
+                        level="h3"
+                        className="heading-3 mb-4"
+                        id="card-title"
+                      >
                         {title}
                       </Title>
                     </Link>
