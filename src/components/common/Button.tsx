@@ -30,7 +30,7 @@ const buttonStyles = cva({
     size: {
       default: "py-3 px-5",
       plain: "p-0",
-      label: "py-2 px-3 text-fs-text-tiny ",
+      label: "py-0 px-3 text-fs-text-tiny",
       sm: "py-3 px-5",
       lg: "py-4 px-8",
     },
