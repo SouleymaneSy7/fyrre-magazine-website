@@ -25,6 +25,7 @@ const NavbarMobile: React.FC<NavbarMobilePropsType> = ({
     <React.Fragment>
       <FocusLock returnFocus={true}>
         <Container
+          role="navigation"
           as={"div"}
           className={clsx(
             "container | lg:hidden absolute top-0 left-0 z-10 -translate-y-[100%] bg-default-clr w-full pb-2 transition-transform duration-500 ease-in-out",
