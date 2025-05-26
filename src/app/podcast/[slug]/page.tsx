@@ -15,6 +15,7 @@ import LinkWithArrow from "@/components/layouts/LinkWithArrow";
 import PodcastSidebar from "@/components/layouts/PodcastSidebar";
 import PodcastContents from "@/components/layouts/PodcastContents";
 import VisuallyHidden from "@/components/common/VisuallyHidden";
+import ScrollIndicator from "@/components/layouts/ScrollIndicator";
 
 export async function generateMetadata({
   params,
@@ -41,6 +42,7 @@ const Page = async (props: { params: PagePropsType }) => {
 
   return (
     <main id="main-content" className="container">
+      <ScrollIndicator />
       <SingleNav goBackHref="podcast" title="podcast" />
 
       <Container

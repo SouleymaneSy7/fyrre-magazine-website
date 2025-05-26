@@ -13,6 +13,7 @@ import SingleNav from "@/components/layouts/SingleNav";
 import AuthorSideBar from "@/components/layouts/AuthorSideBar";
 import DateFormatter from "@/components/layouts/DateFormatter";
 import AuthorContents from "@/components/layouts/AuthorContents";
+import ScrollIndicator from "@/components/layouts/ScrollIndicator";
 
 export async function generateMetadata({
   params,
@@ -39,6 +40,7 @@ const Page = async (props: { params: PagePropsType }) => {
 
   return (
     <main id="main-content" className="container">
+      <ScrollIndicator />
       <SingleNav goBackHref="authors" title="authors" />
 
       <Container

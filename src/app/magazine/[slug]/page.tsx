@@ -15,6 +15,7 @@ import { loadArticle } from "@/libs/fileHelpers";
 import { ArrowRightIcon } from "@/icons/Icons.component";
 import MagazineLatestArticles from "@/components/layouts/MagazineLatestArticles";
 import VisuallyHidden from "@/components/common/VisuallyHidden";
+import ScrollIndicator from "@/components/layouts/ScrollIndicator";
 
 export async function generateMetadata({
   params,
@@ -41,6 +42,7 @@ const Page = async (props: { params: PagePropsType }) => {
 
   return (
     <main id="main-content" className="container">
+      <ScrollIndicator />
       <SingleNav goBackHref="magazine" title="magazine" />
 
       <Container as={"section"}>
