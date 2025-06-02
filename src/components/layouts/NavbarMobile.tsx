@@ -11,15 +11,17 @@ import useOnDisabledBodyScroll from "@/hooks/useOnDisabledBodyScroll";
 import { ArrowRightIcon } from "@/icons/Icons.component";
 import { NavbarMobilePropsType } from "@/types";
 import { navbarMobileList } from "@/constants";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
+// import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const NavbarMobile: React.FC<NavbarMobilePropsType> = ({
   isOpen,
   handleClick,
 }) => {
-  const isMobile = useMediaQuery("(max-width: 1024px)");
+  // const isMobile = useMediaQuery("(max-width: 1024px)");
 
-  isMobile ? useOnDisabledBodyScroll(isOpen) : useOnDisabledBodyScroll(false);
+  // isMobile ? useOnDisabledBodyScroll(isOpen) : useOnDisabledBodyScroll(false);
+
+  useOnDisabledBodyScroll(isOpen);
 
   return (
     <React.Fragment>
