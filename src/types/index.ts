@@ -67,6 +67,7 @@ export type FrontmatterType = {
   image: string;
   cover_image: string;
   author_image: string;
+  hero_image: string;
   date: string;
   job?: string;
   city?: string;
