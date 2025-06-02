@@ -55,8 +55,8 @@ const MagazinePostHero: React.FC<MagazinePostHeroPropsType> = ({
           </div>
         </div>
 
-        <Button variant="label" size="label">
-          {magazineTag}
+        <Button variant="label" size="label" asChild>
+          <div>{magazineTag}</div>
         </Button>
       </div>
 

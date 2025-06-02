@@ -28,8 +28,8 @@ const MagazineSummaryCard: React.FC<MagazineSummaryCardPropsType> = ({
         <div className="flex items-center justify-between mb-5 md:mb-6 lg:mb-8">
           <DateFormatter dateString={magazineDate} />
 
-          <Button variant="label" size="label">
-            {magazineTag}
+          <Button variant="label" size="label" asChild>
+            <div>{magazineTag}</div>
           </Button>
         </div>
 
