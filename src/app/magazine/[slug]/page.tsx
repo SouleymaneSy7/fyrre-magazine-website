@@ -51,7 +51,7 @@ const Page = async (props: { params: PagePropsType }) => {
           magazineTitle={frontmatter.title}
           magazineAuthor={frontmatter.author}
           magazineAuthorLink={frontmatter.author}
-          magazineCover={frontmatter.cover_image}
+          magazineCover={frontmatter.hero_image}
           magazineDate={frontmatter.date}
           magazinePreview={frontmatter.preview}
           magazineReadTime={frontmatter.read_time}
