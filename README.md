@@ -4,7 +4,7 @@
 
 ## Demo
 
-Website Link: [Live Site](https://fyrre-magazine-webstite.netlify.app)
+Website Link: [Demo Live Site](https://fyrre-magazine-website.netlify.app/)
 
 Total time spent on this project: [![wakatime](https://wakatime.com/badge/user/018cb534-87bb-4814-975b-ca5e3cb8572b/project/827caf3f-fbf5-4885-870d-6eaa599484e2.svg)](https://wakatime.com/badge/user/018cb534-87bb-4814-975b-ca5e3cb8572b/project/827caf3f-fbf5-4885-870d-6eaa599484e2)
 
