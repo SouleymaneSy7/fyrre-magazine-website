@@ -1,11 +1,14 @@
+import Link from "next/link";
+import { Metadata } from "next";
+
 import Button from "@/components/common/Button";
 import { ArrowRightIcon } from "@/icons/Icons.component";
-import Link from "next/link";
 
-export const metadata = {
-  title: "Coming Soon — Fyrre Magazine",
-  description: "This page is being born. Check back soon.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Coming Soon | Fyrre - Modern Magazine & Digital Content Hub",
+  };
+}
 
 const Page = () => {
   return (
