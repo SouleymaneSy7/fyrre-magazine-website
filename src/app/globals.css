@@ -267,6 +267,7 @@
   .ghost-text {
     color: transparent !important;
     -webkit-text-stroke: 0.125rem var(--color-text-default-clr);
+    opacity: 0.7;
 
     user-select: none;
   }
