@@ -16,7 +16,7 @@
   --color-*: initial;
   --color-default-clr: oklch(1 0 0);
   --color-primary-clr: oklch(0 0 0);
-  --color-muted-bg-clr: #f8f8f8;
+  --color-muted-bg-clr: oklch(0.9791 0 0);
   --color-border-default-clr: var(--color-primary-clr);
   --color-border-inversed-clr: oklch(0.17 0 0 / 10%);
   --color-text-default-clr: var(--color-primary-clr);
@@ -262,6 +262,13 @@
 
   .form-select {
     @apply w-full text-fs-paragraph px-4 py-2 bg-transparent border border-border-inversed-clr rounded-none focus-visible:rounded-none focus-within:rounded-none focus:rounded-none focus-visible:border-primary-clr focus-within:border-primary-clr focus:border-primary-clr focus-within:outline-none focus:outline-none focus-visible:outline-none;
+  }
+
+  .ghost-text {
+    color: transparent !important;
+    -webkit-text-stroke: 0.125rem var(--color-text-default-clr);
+
+    user-select: none;
   }
 }
 
