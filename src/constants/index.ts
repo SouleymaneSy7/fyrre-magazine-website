@@ -238,17 +238,17 @@ const FooterLinkList1 = [
   {
     id: 0,
     title: "Art",
-    href: "#",
+    href: "/coming-soon",
   },
   {
     id: 1,
     title: "Design",
-    href: "#",
+    href: "/coming-soon",
   },
   {
     id: 2,
     title: "Architecture",
-    href: "#",
+    href: "/coming-soon",
   },
 ];
 
@@ -279,12 +279,12 @@ const FooterLinkList3 = [
   {
     id: 7,
     title: "Licensing",
-    href: "#",
+    href: "/coming-soon",
   },
   {
     id: 8,
     title: "Changelog",
-    href: "#",
+    href: "/coming-soon",
   },
 ];
 
