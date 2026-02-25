@@ -192,6 +192,8 @@ export type MagazinePostSidebarPropsType = {
   }[];
 };
 
+export type MagazinesPropsType = { magazines: ArticleDataType[] };
+
 export type LinkWithArrowPropsType = {
   linkHref: string;
   linkTitle: string;
