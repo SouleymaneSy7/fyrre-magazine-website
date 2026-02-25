@@ -33,10 +33,12 @@ const Page = async () => {
           Categories
         </Title>
 
-        <MagazineCategories />
+        <React.Suspense fallback={<>Loading...</>}>
+          <MagazineCategories />
+        </React.Suspense>
       </Container>
 
-      <React.Suspense fallback={<>Loading</>}>
+      <React.Suspense fallback={<>Loading...</>}>
         <Magazines magazines={magazinePost} />
       </React.Suspense>
     </main>
