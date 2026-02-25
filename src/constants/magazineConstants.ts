@@ -5,7 +5,7 @@ const magazineCategories = [
   },
   {
     id: crypto.randomUUID(),
-    tag: "art",
+    tag: "sculptures",
   },
   {
     id: crypto.randomUUID(),
@@ -13,7 +13,7 @@ const magazineCategories = [
   },
   {
     id: crypto.randomUUID(),
-    tag: "sculptures",
+    tag: "art",
   },
 ];
 
