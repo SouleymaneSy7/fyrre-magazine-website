@@ -200,3 +200,12 @@ export type LinkWithArrowPropsType = {
   Icon?: React.FC<IconPropsType>;
   classNames?: string;
 };
+
+export interface PaginationPropsType {
+  currentPage: number;
+  totalPages: number;
+  onPrev: () => void;
+  onNext: () => void;
+  isFirstPage: boolean;
+  isLastPage: boolean;
+}
