@@ -1,6 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import clsx from "clsx";
+
+import { useRouter, useSearchParams } from "next/navigation";
 
 import List from "../common/List";
 import Button from "../common/Button";
@@ -8,8 +10,10 @@ import { magazineCategories } from "@/constants/magazineConstants";
 
 const MagazineCategories = () => {
   const router = useRouter();
+  const params = useSearchParams();
+  const category = params.get("category");
 
-  const setFilter = (category: string) => {
+  const handleFilter = (category: string) => {
     if (category) {
       router.push("?category=" + category);
     }
@@ -23,10 +27,15 @@ const MagazineCategories = () => {
         return (
           <li key={item.id} role="listitem">
             <Button
-              variant="label"
               size="label"
+              variant="label"
+              className={clsx(
+                category === item.tag
+                  ? "bg-primary-clr text-text-inversed-clr"
+                  : "",
+              )}
               onClick={() => {
-                setFilter(item.tag);
+                handleFilter(item.tag);
               }}
             >
               {item.tag}
