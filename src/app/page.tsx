@@ -12,7 +12,12 @@ import HomepageMagazineList from "@/components/layouts/HomepageMagazineList";
 
 export default function Home() {
   return (
-    <main id="main-content" className="container">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container"
+    >
       <Headline
         imageSrc="/assets/svgs/headline-art-life.svg"
         altText="art life headline text svg illustration"

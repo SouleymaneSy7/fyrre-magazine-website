@@ -41,7 +41,12 @@ const Page = async (props: { params: PagePropsType }) => {
   const { frontmatter, content } = await loadArticle("podcast", params.slug);
 
   return (
-    <main id="main-content" className="container">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container"
+    >
       <ScrollIndicator />
       <SingleNav goBackHref="podcast" title="podcast" />
 
@@ -125,7 +130,7 @@ const Page = async (props: { params: PagePropsType }) => {
                   </div>
                 </Card>
               );
-            }
+            },
           )}
         </div>
       </Container>

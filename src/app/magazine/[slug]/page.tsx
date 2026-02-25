@@ -41,7 +41,12 @@ const Page = async (props: { params: PagePropsType }) => {
   const { frontmatter, content } = await loadArticle("magazine", params.slug);
 
   return (
-    <main id="main-content" className="container">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container"
+    >
       <ScrollIndicator />
       <SingleNav goBackHref="magazine" title="magazine" />
 

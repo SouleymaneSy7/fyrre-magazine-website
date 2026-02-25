@@ -15,7 +15,12 @@ const Page = async () => {
   const podcastList = await getArticlesList("podcast");
 
   return (
-    <main id="main-content" className="container">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container"
+    >
       <Headline
         imageSrc="/assets/svgs/headline-podcast.svg"
         altText="podcast headline text svg illustration"

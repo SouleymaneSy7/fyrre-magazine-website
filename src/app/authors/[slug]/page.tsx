@@ -39,7 +39,12 @@ const Page = async (props: { params: PagePropsType }) => {
   const { frontmatter, content } = await loadArticle("authors", params.slug);
 
   return (
-    <main id="main-content" className="container">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container"
+    >
       <ScrollIndicator />
       <SingleNav goBackHref="authors" title="authors" />
 
@@ -113,7 +118,7 @@ const Page = async (props: { params: PagePropsType }) => {
                   </div>
                 </Card>
               );
-            }
+            },
           )}
         </div>
       </Container>

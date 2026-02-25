@@ -4,7 +4,12 @@ import { ArrowRightIcon } from "@/icons/Icons.component";
 
 const Custom404 = () => {
   return (
-    <main className="container | grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container | grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8"
+    >
       <div className="text-center">
         <p
           className="heading-medium ghost-text text-primary-clr"

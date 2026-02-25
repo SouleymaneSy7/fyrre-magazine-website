@@ -15,7 +15,12 @@ const page = async () => {
   const avatarList = await getArticlesList("authors");
 
   return (
-    <main id="main-content" className="container">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container"
+    >
       <Headline
         imageSrc="/assets/svgs/headline-authors.svg"
         altText="authors headline text svg"

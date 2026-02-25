@@ -23,7 +23,7 @@ const AuthorSideBar: React.FC<AuthorSideBarPropsType> = ({
           height={150}
           src={imageSrc}
           alt={`${authorName} - profile image.`}
-          className="w-full h-full"
+          className="w-full h-full aspect-square object-content"
           priority
         />
       </div>

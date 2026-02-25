@@ -19,7 +19,12 @@ const Page = async () => {
   const magazinePost = await getArticlesList("magazine");
 
   return (
-    <main id="main-content" className="container">
+    <main
+      role="main"
+      id="main-content"
+      aria-labelledby="main-content"
+      className="container"
+    >
       <Headline
         imageSrc="/assets/svgs/headline-magazine.svg"
         altText="magazine headline text svg illustration"
