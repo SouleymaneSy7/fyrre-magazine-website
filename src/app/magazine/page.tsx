@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Metadata } from "next";
 
 import { getArticlesList } from "@/libs/fileHelpers";
@@ -35,7 +36,9 @@ const Page = async () => {
         <MagazineCategories />
       </Container>
 
-      <Magazines magazines={magazinePost} />
+      <React.Suspense fallback={<>Loading</>}>
+        <Magazines magazines={magazinePost} />
+      </React.Suspense>
     </main>
   );
 };
