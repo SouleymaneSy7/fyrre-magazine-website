@@ -13,6 +13,7 @@
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "gray-matter": "^4.0.3",
+    "lucide-react": "^0.575.0",
     "motion": "^12.34.3",
     "next": "16.1.6",
     "next-mdx-remote": "^6.0.0",
