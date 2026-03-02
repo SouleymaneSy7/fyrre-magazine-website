@@ -13,11 +13,9 @@ import { FooterMarquee } from "@/constants/marqueeConstants";
 
 import Marquee from "./Marquee";
 import List from "../common/List";
-import Form from "../common/Form";
 import Title from "../common/Title";
-import Inputs from "../common/Input";
-import Button from "../common/Button";
 import VisuallyHidden from "../common/VisuallyHidden";
+import NewsletterForm from "./NewsletterForm";
 
 const Footer: React.FC = () => {
   return (
@@ -32,20 +30,7 @@ const Footer: React.FC = () => {
             </Title>
           </div>
 
-          <Form className="w-full flex flex-col gap-3 lg:max-w-[480px]  lg:flex-row lg:gap-4">
-            <Inputs
-              name="email"
-              type="email"
-              placeholder="Email"
-              className="form-input | lg:max-w-[360px] bg-default-clr text-text-muted-clr"
-            />
-            <Button
-              variant="default"
-              className="bg-default-clr text-primary-clr"
-            >
-              Sign Up
-            </Button>
-          </Form>
+          <NewsletterForm variant="footer" />
         </div>
 
         <div className="flex flex-col gap-x-large lg:flex-row lg:items-start lg:justify-between">
