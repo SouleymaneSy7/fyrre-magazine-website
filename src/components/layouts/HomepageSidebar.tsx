@@ -9,10 +9,14 @@ import Button from "../common/Button";
 import Container from "../common/Container";
 
 import { FooterHeading, homepagePopularPostList } from "@/constants";
+import NewsletterForm from "./NewsletterForm";
 
 const HomepageSidebar = () => {
   return (
-    <Container as={"aside"} className="col-span-2 md:hidden lg:block lg:col-span-1">
+    <Container
+      as={"aside"}
+      className="col-span-2 md:hidden lg:block lg:col-span-1"
+    >
       <div>
         <div className="mb-5 lg:mb-6">
           <p className="heading-6 uppercase font-semi-bold">PrintMagazine</p>
@@ -67,20 +71,26 @@ const HomepageSidebar = () => {
                   </div>
                 </Card>
               );
-            }
+            },
           )}
         </div>
       </div>
 
       <Card className="pt-7 px-8 pb-8 bg-muted-bg-clr">
-        <Title level="h3" className="heading-6 uppercase mb-2">Newsletter</Title>
+        <Title level="h3" className="heading-6 uppercase mb-2">
+          Newsletter
+        </Title>
 
-        <Title level="h2" className="heading-3 mb-4">{FooterHeading}</Title>
+        <Title level="h2" className="heading-3 mb-4">
+          {FooterHeading}
+        </Title>
 
-        <Form className="flex flex-col gap-2">
-          <Inputs type="email" placeholder="Email" className="form-input | border-none bg-default-clr" />
-          <Button variant="default">Sign Up</Button>
-        </Form>
+        {/* <Form className="flex flex-col gap-2"> */}
+        {/* <Inputs type="email" placeholder="Email" className="form-input | border-none bg-default-clr" /> */}
+        {/* <Button variant="default">Sign Up</Button> */}
+        {/* </Form> */}
+
+        <NewsletterForm variant="sidebar" />
       </Card>
     </Container>
   );
