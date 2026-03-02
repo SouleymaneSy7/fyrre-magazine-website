@@ -1,4 +1,6 @@
+import { emailSchema } from "@/validators";
 import * as React from "react";
+import z from "zod";
 
 export type VisuallyHiddenPropsType = {
   children: React.ReactNode;
@@ -208,4 +210,41 @@ export interface PaginationPropsType {
   onNext: () => void;
   isFirstPage: boolean;
   isLastPage: boolean;
+}
+
+export type NewsletterFormDataType = z.infer<typeof emailSchema>;
+
+export type NewsletterFormVariantType = "footer" | "sidebar";
+
+export type NewsletterFormVariantContentType = {
+  formClassName: string;
+  inputClassName: string;
+  buttonClassName: string | undefined;
+  spinnerVariant: "default" | "inversed";
+};
+
+export interface NewsletterFormPropsType {
+  variant?: NewsletterFormVariantType;
+}
+
+export interface ToastStateType {
+  message: string;
+  type: "success" | "error";
+}
+
+export interface ToastPropsType {
+  message: string;
+  type: "success" | "error";
+  onClose: () => void;
+  duration?: number;
+}
+
+export interface WelcomeEmailPropsType {
+  email: string;
+}
+
+export interface AdminNotificationEmailPropsType {
+  subscriberEmail: string;
+  subscribedAt?: string;
+  totalSubscribers?: number;
 }
