@@ -17,6 +17,7 @@
   --color-default-clr: oklch(1 0 0);
   --color-primary-clr: oklch(0 0 0);
   --color-muted-bg-clr: oklch(0.9791 0 0);
+  --color-destructive-clr: oklch(0.483 0.1711 15);
   --color-border-default-clr: var(--color-primary-clr);
   --color-border-inversed-clr: oklch(0.17 0 0 / 10%);
   --color-text-default-clr: var(--color-primary-clr);
@@ -98,12 +99,46 @@
 
   /* Animation */
   --animate-*: initial;
-  --animate-marquee-move-text: marquee-move-text 25s linear infinite forwards;
+  --animate-marquee-move-text: marquee-move-text 25000ms linear infinite
+    forwards;
+  --animate-fade-in: fade-in 300ms ease forwards;
+  --animate-spinner-bar: spinner-bar 800ms ease-in-out infinite alternate;
 
   /* Keyframes */
   @keyframes marquee-move-text {
     to {
       transform: translateX(-50%);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  @keyframes spinner-bar {
+    0% {
+      transform: scaleY(0.2);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes toast-progress {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0);
     }
   }
 }
