@@ -192,43 +192,51 @@ fyrre-magazine-website/
 │   │   │   ├── SkipToContents.tsx
 │   │   │   ├── Title.tsx
 │   │   │   └── VisuallyHidden.tsx
-│   │   └── layouts/                     # Page-level layout components
-│   │       ├── AuthorContents.tsx
-│   │       ├── AuthorSideBar.tsx
-│   │       ├── AuthorSummaryCard.tsx
-│   │       ├── Custom404.tsx
-│   │       ├── DateFormatter.tsx
-│   │       ├── Footer.tsx
-│   │       ├── HamburgerMenu.tsx
-│   │       ├── Header.tsx
-│   │       ├── Headline.tsx
-│   │       ├── HomepageAuthorList.tsx
-│   │       ├── HomepageHero.tsx
-│   │       ├── HomepageMagazineList.tsx
-│   │       ├── HomepagePodcastList.tsx
-│   │       ├── HomepageSidebar.tsx
-│   │       ├── LinkWithArrow.tsx
-│   │       ├── MagazineCategories.tsx   # Category filter with URL sync
-│   │       ├── MagazineLatestArticles.tsx
-│   │       ├── MagazinePostContents.tsx
-│   │       ├── MagazinePostHero.tsx
-│   │       ├── MagazinePostSidebar.tsx
-│   │       ├── MagazineSummaryCard.tsx
-│   │       ├── Magazines.tsx            # Magazine grid with filter + pagination
-│   │       ├── Marquee.tsx
-│   │       ├── Navbar.tsx
-│   │       ├── NavbarDesktop.tsx
-│   │       ├── NavbarMobile.tsx
-│   │       ├── NewsletterForm.tsx       # Unified form — footer & sidebar variants
-│   │       ├── Pagination.tsx           # Prev/Next navigation with URL sync
-│   │       ├── PodcastContents.tsx
-│   │       ├── PodcastSidebar.tsx
-│   │       ├── PodcastSummaryCard.tsx
-│   │       ├── PrintEditionCard.tsx     # Cover card with hover overlay + coming soon CTA
-│   │       ├── ScrollIndicator.tsx
-│   │       ├── SingleNav.tsx
-│   │       ├── Spinner.tsx              # Animated 4-bar loading indicator
-│   │       └── Toast.tsx                # Slide-up notification with progress bar
+│   │   ├── ui/                          # Reusable UI components
+│   │   │   ├── DateFormatter.tsx
+│   │   │   ├── Headline.tsx
+│   │   │   ├── LinkWithArrow.tsx
+│   │   │   ├── Marquee.tsx
+│   │   │   ├── Pagination.tsx           # Prev/Next navigation with URL sync
+│   │   │   ├── PrintEditionCard.tsx     # Cover card with hover overlay + coming soon CTA
+│   │   │   ├── ScrollIndicator.tsx
+│   │   │   ├── Spinner.tsx              # Animated 4-bar loading indicator
+│   │   │   └── Toast.tsx                # Slide-up notification with progress bar
+│   │   ├── navigation/                  # Navigation components
+│   │   │   ├── Footer.tsx
+│   │   │   ├── HamburgerMenu.tsx
+│   │   │   ├── Header.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── NavbarDesktop.tsx
+│   │   │   ├── NavbarMobile.tsx
+│   │   │   └── SingleNav.tsx
+│   │   ├── sections/                    # Page section components
+│   │   │   ├── homepage/
+│   │   │   │   ├── HomepageAuthorList.tsx
+│   │   │   │   ├── HomepageHero.tsx
+│   │   │   │   ├── HomepageMagazineList.tsx
+│   │   │   │   ├── HomepagePodcastList.tsx
+│   │   │   │   └── HomepageSidebar.tsx
+│   │   │   ├── magazine/
+│   │   │   │   ├── MagazineCategories.tsx  # Category filter with URL sync
+│   │   │   │   ├── MagazineLatestArticles.tsx
+│   │   │   │   ├── MagazinePostContents.tsx
+│   │   │   │   ├── MagazinePostHero.tsx
+│   │   │   │   ├── MagazinePostSidebar.tsx
+│   │   │   │   ├── MagazineSummaryCard.tsx
+│   │   │   │   └── Magazines.tsx           # Magazine grid with filter + pagination
+│   │   │   ├── authors/
+│   │   │   │   ├── AuthorContents.tsx
+│   │   │   │   ├── AuthorSideBar.tsx
+│   │   │   │   └── AuthorSummaryCard.tsx
+│   │   │   └── podcast/
+│   │   │       ├── PodcastContents.tsx
+│   │   │       ├── PodcastSidebar.tsx
+│   │   │       └── PodcastSummaryCard.tsx
+│   │   ├── forms/                       # Form components
+│   │   │   └── NewsletterForm.tsx       # Unified form — footer & sidebar variants
+│   │   └── errors/                      # Error & fallback pages
+│   │       └── Custom404.tsx
 │   │
 │   ├── emails/                          # React Email templates
 │   │   ├── WelcomeEmail/
