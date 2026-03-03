@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@next/eslint-plugin-next": "^16.1.6",
     "@radix-ui/react-slot": "^1.2.4",
     "@react-email/components": "^1.0.8",
+    "@typescript-eslint/parser": "^8.56.1",
     "class-variance-authority": "^0.7.1",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.575.0",
