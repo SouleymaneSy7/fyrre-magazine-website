@@ -8,6 +8,7 @@ import Headline from "@/components/layouts/Headline";
 import Container from "@/components/common/Container";
 import Magazines from "@/components/layouts/Magazines";
 import MagazineCategories from "@/components/layouts/MagazineCategories";
+import Spinner from "@/components/layouts/Spinner";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -38,12 +39,24 @@ const Page = async () => {
           Categories
         </Title>
 
-        <React.Suspense fallback={<>Loading...</>}>
+        <React.Suspense
+          fallback={
+            <React.Fragment>
+              <Spinner />
+            </React.Fragment>
+          }
+        >
           <MagazineCategories />
         </React.Suspense>
       </Container>
 
-      <React.Suspense fallback={<>Loading...</>}>
+      <React.Suspense
+        fallback={
+          <React.Fragment>
+            <Spinner />
+          </React.Fragment>
+        }
+      >
         <Magazines magazines={magazinePost} />
       </React.Suspense>
     </main>
