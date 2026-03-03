@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/navigation/Footer";
 import SkipToContent from "@/components/common/SkipToContents";
 
 const generalSans = localFont({

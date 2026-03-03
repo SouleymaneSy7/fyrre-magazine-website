@@ -4,11 +4,11 @@ import { Metadata } from "next";
 import { getArticlesList } from "@/libs/fileHelpers";
 
 import Title from "@/components/common/Title";
-import Headline from "@/components/layouts/Headline";
+import MagazineCategories from "@/components/sections/magazine/MagazineCategories";
+import Magazines from "@/components/sections/magazine/Magazines";
+import Headline from "@/components/ui/Headline";
+import Spinner from "@/components/ui/Spinner";
 import Container from "@/components/common/Container";
-import Magazines from "@/components/layouts/Magazines";
-import MagazineCategories from "@/components/layouts/MagazineCategories";
-import Spinner from "@/components/layouts/Spinner";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

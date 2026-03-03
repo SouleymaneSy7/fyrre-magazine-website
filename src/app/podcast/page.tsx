@@ -2,8 +2,8 @@ import { Metadata } from "next";
 
 import { getArticlesList } from "@/libs/fileHelpers";
 
-import Headline from "@/components/layouts/Headline";
-import PodcastSummaryCard from "@/components/layouts/PodcastSummaryCard";
+import Headline from "@/components/ui/Headline";
+import PodcastSummaryCard from "@/components/sections/podcast/PodcastSummaryCard";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

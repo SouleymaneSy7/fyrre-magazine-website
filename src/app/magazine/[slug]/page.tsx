@@ -1,21 +1,21 @@
 import Link from "next/link";
 import { Metadata } from "next";
 
-import Title from "@/components/common/Title";
-import Container from "@/components/common/Container";
-import SingleNav from "@/components/layouts/SingleNav";
-import LinkWithArrow from "@/components/layouts/LinkWithArrow";
-import MagazinePostHero from "@/components/layouts/MagazinePostHero";
-import MagazinePostSidebar from "@/components/layouts/MagazinePostSidebar";
-import MagazinePostContents from "@/components/layouts/MagazinePostContents";
-
 import { PagePropsType } from "@/types";
 import { shareSocials } from "@/constants";
 import { loadArticle } from "@/libs/fileHelpers";
 import { ArrowRightIcon } from "@/icons/Icons.component";
-import MagazineLatestArticles from "@/components/layouts/MagazineLatestArticles";
+
+import Title from "@/components/common/Title";
 import VisuallyHidden from "@/components/common/VisuallyHidden";
-import ScrollIndicator from "@/components/layouts/ScrollIndicator";
+import SingleNav from "@/components/navigation/SingleNav";
+import MagazineLatestArticles from "@/components/sections/magazine/MagazineLatestArticles";
+import MagazinePostContents from "@/components/sections/magazine/MagazinePostContents";
+import MagazinePostHero from "@/components/sections/magazine/MagazinePostHero";
+import MagazinePostSidebar from "@/components/sections/magazine/MagazinePostSidebar";
+import LinkWithArrow from "@/components/ui/LinkWithArrow";
+import ScrollIndicator from "@/components/ui/ScrollIndicator";
+import Container from "@/components/common/Container";
 
 export async function generateMetadata({
   params,

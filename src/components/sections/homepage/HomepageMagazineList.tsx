@@ -1,0 +1,82 @@
+import Link from "next/link";
+import Image from "next/image";
+
+import Card from "@/components/common/Card";
+import Title from "@/components/common/Title";
+import Button from "@/components/common/Button";
+import Container from "@/components/common/Container";
+
+import { homepageMagazineSummaryList } from "@/constants";
+
+const HomepageMagazineList = () => {
+  return (
+    <Container as={"div"} className="col-span-2">
+      {homepageMagazineSummaryList.map((item) => {
+        return (
+          <Card
+            key={item.id}
+            className="flex flex-col gap-4 mb-8 pb-8 border-b border-b-primary-clr nth-last-[1]:border-b-0 nth-last-[1]:pb-0 nth-last-[1]:mb-0 md:flex-row md:gap-6 lg:mb-12 lg:pb-12 lg:gap-8"
+          >
+            <Link
+              href={item.postLink}
+              className="w-full max-w-[240px] h-full block"
+            >
+              <Image
+                width={500}
+                height={500}
+                src={item.coverImage}
+                alt={`${item.title} - magazine cover.`}
+                className="w-full h-full aspect-square object-cover"
+              />
+            </Link>
+
+            <div className="lg:flex lg:flex-col lg:justify-between">
+              <div>
+                <Link href={item.postLink}>
+                  <Title level="h2" className="heading-3 mb-4" id="card-title">
+                    {item.title}
+                  </Title>
+                </Link>
+                <p>{item.preview}</p>
+              </div>
+
+              <div className="flex flex-col gap-4 mt-8 lg:flex-row lg:justify-between lg:items-center">
+                <div className="flex flex-col gap-2 lg:flex-row lg:gap-6">
+                  <div className="flex gap-2">
+                    <strong>Text</strong>
+                    <Link href={item.authorLink} className="text-link">
+                      <span>{item.author}</span>
+                    </Link>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <strong>Date</strong>
+                    <span>{item.date}</span>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <strong>Read</strong>
+                    <span>{item.readTime}</span>
+                  </div>
+                </div>
+
+                <div>
+                  <Button
+                    asChild
+                    variant="label"
+                    size="label"
+                    className="cursor-text"
+                  >
+                    <span>{item.tag}</span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Card>
+        );
+      })}
+    </Container>
+  );
+};
+
+export default HomepageMagazineList;

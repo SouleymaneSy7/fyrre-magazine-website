@@ -4,7 +4,7 @@ import Button from "@/components/common/Button";
 import Forms from "@/components/common/Form";
 import Inputs from "@/components/common/Input";
 import List from "@/components/common/List";
-import Marquee from "@/components/layouts/Marquee";
+import Marquee from "@/components/ui/Marquee";
 import { ArrowRightIcon } from "@/icons/Icons.component";
 
 const list = ["List Element 1", "List Element 2", "List Element 3"];

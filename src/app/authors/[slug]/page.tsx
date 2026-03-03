@@ -9,11 +9,11 @@ import { followSocials } from "@/constants/authorsConstants";
 import Card from "@/components/common/Card";
 import Title from "@/components/common/Title";
 import Container from "@/components/common/Container";
-import SingleNav from "@/components/layouts/SingleNav";
-import AuthorSideBar from "@/components/layouts/AuthorSideBar";
-import DateFormatter from "@/components/layouts/DateFormatter";
-import AuthorContents from "@/components/layouts/AuthorContents";
-import ScrollIndicator from "@/components/layouts/ScrollIndicator";
+import SingleNav from "@/components/navigation/SingleNav";
+import AuthorSideBar from "@/components/sections/authors/AuthorSideBar";
+import DateFormatter from "@/components/ui/DateFormatter";
+import AuthorContents from "@/components/sections/authors/AuthorContents";
+import ScrollIndicator from "@/components/ui/ScrollIndicator";
 
 export async function generateMetadata({
   params,

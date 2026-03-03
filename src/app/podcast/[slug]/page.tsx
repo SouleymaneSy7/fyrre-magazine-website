@@ -7,15 +7,15 @@ import { loadArticle } from "@/libs/fileHelpers";
 import { ArrowRightIcon } from "@/icons/Icons.component";
 import { homepagePodcastList, listenSocials, shareSocials } from "@/constants";
 
+import Container from "@/components/common/Container";
 import Card from "@/components/common/Card";
 import Title from "@/components/common/Title";
-import Container from "@/components/common/Container";
-import SingleNav from "@/components/layouts/SingleNav";
-import LinkWithArrow from "@/components/layouts/LinkWithArrow";
-import PodcastSidebar from "@/components/layouts/PodcastSidebar";
-import PodcastContents from "@/components/layouts/PodcastContents";
 import VisuallyHidden from "@/components/common/VisuallyHidden";
-import ScrollIndicator from "@/components/layouts/ScrollIndicator";
+import SingleNav from "@/components/navigation/SingleNav";
+import PodcastContents from "@/components/sections/podcast/PodcastContents";
+import PodcastSidebar from "@/components/sections/podcast/PodcastSidebar";
+import LinkWithArrow from "@/components/ui/LinkWithArrow";
+import ScrollIndicator from "@/components/ui/ScrollIndicator";
 
 export async function generateMetadata({
   params,

@@ -2,8 +2,8 @@ import { Metadata } from "next";
 
 import { getArticlesList } from "@/libs/fileHelpers";
 
-import Headline from "@/components/layouts/Headline";
-import AuthorSummaryCard from "@/components/layouts/AuthorSummaryCard";
+import Headline from "@/components/ui/Headline";
+import AuthorSummaryCard from "@/components/sections/authors/AuthorSummaryCard";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
