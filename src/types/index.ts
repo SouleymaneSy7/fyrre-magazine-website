@@ -248,3 +248,13 @@ export interface AdminNotificationEmailPropsType {
   subscribedAt?: string;
   totalSubscribers?: number;
 }
+
+export type SpinnerSizeType = "sm" | "md" | "lg";
+export type SpinnerVariantType = "default" | "inversed";
+
+export interface SpinnerPropsType {
+  size?: SpinnerSizeType;
+  variant?: SpinnerVariantType;
+  label?: string;
+  className?: string;
+}
