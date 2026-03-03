@@ -61,8 +61,13 @@ const HomepageMagazineList = () => {
                 </div>
 
                 <div>
-                  <Button variant="label" size="label">
-                    {item.tag}
+                  <Button
+                    asChild
+                    variant="label"
+                    size="label"
+                    className="cursor-text"
+                  >
+                    <span>{item.tag}</span>
                   </Button>
                 </div>
               </div>

@@ -70,8 +70,13 @@ const HomepageHero = () => {
             </div>
 
             <div>
-              <Button variant="label" size="label">
-                {tag}
+              <Button
+                asChild
+                variant="label"
+                size="label"
+                className="cursor-text"
+              >
+                <span>{tag}</span>
               </Button>
             </div>
           </div>
