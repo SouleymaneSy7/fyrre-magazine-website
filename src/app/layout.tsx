@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SkipToContent from "@/components/common/SkipToContents";
+import LenisProvider from "@/components/providers/LenisProvider";
 
 const generalSans = localFont({
   src: [
@@ -71,10 +73,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${generalSans.variable} antialiased`}>
-        <SkipToContent />
-        <Header />
-        {children}
-        <Footer />
+        <LenisProvider>
+          <SkipToContent />
+          <Header />
+          {children}
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );
